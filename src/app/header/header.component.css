@@ -1,3 +1,12 @@
-*{
-    background-color: gray;
+
+
+img{
+    width: auto;
+    height: auto;
+}
+
+h1{
+    color: red;
+    text-align: center;
+    font-size: 5rem;
 }
