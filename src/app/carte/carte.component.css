@@ -2,3 +2,16 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.pokemon{
+    width: 30%;
+    margin: auto;
+    }
+
+.pokemon img{
+    width: 100%;
+}
+
+.pokemon :hover{
+     scale: 130%;
+}
