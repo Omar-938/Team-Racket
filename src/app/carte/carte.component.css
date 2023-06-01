@@ -1,0 +1,4 @@
+.pokemonCard{
+    display: flex;
+    flex-wrap: wrap;
+}
