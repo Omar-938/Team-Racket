@@ -1,5 +1,16 @@
 <div>
 <input type="text" [(ngModel)]="search">
-<button>search</button>
+<button (click)="rechercher()">search</button>
+<button (click)="retour()">Retour</button>
 </div>
+
+<div class="appcarte">
+    <app-carte [hidden]="cacher" [recherche]="search"></app-carte>
+</div>
+
+<section [hidden]="cacher1">
+    
+    <img (click)="retour()" src="{{pokeImage}}" alt="image de recherche">   
+    
+</section>
 

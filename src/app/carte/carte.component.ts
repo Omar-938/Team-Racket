@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, min } from 'rxjs';
 
@@ -22,37 +22,21 @@ https://api.pokemontcg.io/v2/cards?q=set.id:base1 name:${pokemonTest}
 https://api.pokemontcg.io/v2/cards?q=set.id:base1 rarity:Common types:Colorless name:doduo*&pageSize=12
 */
 
-pokemonSearch : string= "";
 pokemonData : any;
+@Input() recherche : string = "";
+
 
 
 
   constructor(public http : HttpClient){};
 
-
-  
-
   ngOnInit(): void {
-    /*let pokemonTest = this.pokemonSearch;*/
+
     this.http.get<any>(`https://api.pokemontcg.io/v2/cards?q=set.id:base1`).subscribe(reponse => 
       {
-        
-        this.pokemonData = reponse.data;
-        for (let i = 0 ; i < 5 ; i++){
-          this.pokemonData[i];
-        }
-      });
+        this.pokemonData = reponse.data
+       });
 }
-/*test():void {
-  this.http.get<any>(this.baseUrl).subscribe(reponse2 => 
-    {
-      console.log(reponse2) 
-    });
-}
-*/
- 
-
-
   
 }
  
