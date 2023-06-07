@@ -4,7 +4,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { CarteComponent } from './carte/carte.component';
 import { HeaderComponent } from './header/header.component';
-import { NavComponent } from './nav/nav.component';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 
@@ -13,7 +12,6 @@ import { FooterComponent } from './footer/footer.component';
     AppComponent,
     CarteComponent,
     HeaderComponent,
-    NavComponent,
     FooterComponent
   ],
   imports: [

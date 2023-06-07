@@ -24,6 +24,7 @@ export class CarteComponent implements OnInit {
 random = UserService.random;
 random2 = UserService.random2;
   pokemonData : any;
+  
 
  
 
