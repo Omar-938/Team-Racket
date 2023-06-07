@@ -11,8 +11,21 @@ import { useAnimation } from '@angular/animations';
 })
 export class AppComponent implements OnInit{
   ngOnInit(): void {
-   
+    setTimeout(() => {
+      this.pokemonData = UserService.pokeData;
+      console.log(UserService.random)
+        }
+
+    , 1000);
   }
+
+
+  pokemonData : any;
+  random = UserService.random;
+  random2 = UserService.random2;
+ 
+
+
   title = 'Team_Racket';
 
 

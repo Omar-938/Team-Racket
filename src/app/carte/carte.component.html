@@ -1,11 +1,11 @@
 
-<div class="pokemonCard">
-
+<div class="pokemonCard" *ngFor="let test of pokemonData.slice(random,random2)">
 
     
-    <div class="pokemon" *ngFor="let test of pokemonData.slice(random,random2)">
-<img src="{{test.image}}/low.jpg" alt="image du pokemon">
-    
+
+    <img src="{{test.image}}/low.jpg" alt="">
+
+
 </div>
 
 

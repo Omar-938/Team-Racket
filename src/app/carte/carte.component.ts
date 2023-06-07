@@ -10,22 +10,26 @@ import { UserService } from '../user.service';
 })
 export class CarteComponent implements OnInit {
 
+
+  
+
   ngOnInit(): void {
     setTimeout(() => {
       this.pokemonData = UserService.pokeData;
-      console.log(this.pokemonData)
-    }, 1000);
+        }
+
+    , 1000);
   }
 
-
+random = UserService.random;
+random2 = UserService.random2;
   pokemonData : any;
-  random = UserService.random;
-  random2 = UserService.random2;
+
  
 
+
+ 
 }
- 
-
 
    
   
