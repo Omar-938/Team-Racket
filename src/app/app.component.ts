@@ -23,6 +23,7 @@ export class AppComponent implements OnInit{
   pokemonData : any;
   random = UserService.random;
   random2 = UserService.random2;
+  search : string = "";
  
 
 
