@@ -1,8 +1,37 @@
-.pokemonCard:hover img{
-    scale: 120%;
+
+.pokemonGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
 }
-.pokemonCard{
-    margin: 0.3em;
-    max-width: 30%;
-    margin: auto;
+
+.pokemonCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0;
 }
+
+.pokemonCard:hover {
+  cursor: pointer;
+  transform: scale(1.25);
+  transition: all 0.2s ease-in-out;
+}
+
+.pokemonCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+@media (max-width: 767px) {
+    .pokemonGrid {
+      grid-template-columns: 1fr;
+    }
+  }

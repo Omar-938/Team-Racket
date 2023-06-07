@@ -19,17 +19,11 @@ export class AppComponent implements OnInit{
     , 1000);
   }
 
-
   pokemonData : any;
   random = UserService.random;
   random2 = UserService.random2;
  
-
-
   title = 'Team_Racket';
-
-
-
 }
 
 
