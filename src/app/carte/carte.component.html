@@ -1,14 +1,22 @@
-<div>
 
-    <p>test : </p>
+<button (click)="test()">recherche</button>
+
+
+<div class="recherche" *ngIf="search !== ''">
+    <section class="Card"  *ngFor="let recherche of pokemonsearch">
+        <img src="{{recherche.image}}/low.jpg" alt="">
+        
+    </section>
 </div>
-<div class="pokemonCard" *ngFor="let test of pokemonData.slice(random,random2)">
-
-    
-
-    <img src="{{test.image}}/low.jpg" alt="">
 
 
+
+
+
+<div class="pokemoncard" *ngIf="search === '' ">
+    <section class="Card"  *ngFor="let test of pokemonData.slice(random,random2)">
+        <img src="{{test.image}}/low.jpg" alt="">
+    </section>
 </div>
 
 
