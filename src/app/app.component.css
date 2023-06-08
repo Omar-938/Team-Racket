@@ -11,3 +11,25 @@
     }
 
 
+.recherche{
+        background-color:#3e4346 ;
+        width: 100%;
+    }   
+
+.recherche input{
+    background-color: white;
+    width: 50%;
+    height: 20px;
+}
+div{
+    display: flex;
+    justify-content: center;
+    border: solid black;
+}
+
+.recherche button{
+    width: 10%;
+    color: white;
+    background-color:#3e4346 ;
+}
+
