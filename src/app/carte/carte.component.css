@@ -1,8 +1,20 @@
-.pokemonCard:hover img{
+.Card:hover img{
     scale: 120%;
 }
-.pokemonCard{
+
+.pokemoncard{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.Card{
     margin: 0.3em;
     max-width: 30%;
+    margin: auto;
+}
+
+.recherche{
+    display: flex;
+    flex-wrap: wrap;
     margin: auto;
 }

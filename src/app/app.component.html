@@ -1,10 +1,9 @@
 <app-header class="header"></app-header>
 <div class="recherche">
     <input type="text" [(ngModel)]="search">
-    <button>search</button>
     </div>
     
-<app-carte class="carte"></app-carte>
+<app-carte [search]="search" class="carte"></app-carte>
 
 
 
