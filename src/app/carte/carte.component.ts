@@ -16,32 +16,39 @@ export class CarteComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(() => {
       let test = [];
-      for (let i = 0 ; i < 50; i++){
+      for (let i = 0 ; i < 3409; i++){
         UserService.pokeData[i].name.toLowerCase();
         test.push(UserService.pokeData[i]);
+        test[i].name = UserService.pokeData[i].name.toLowerCase();
 
         }
-        console.log(test);
-      this.pokemonData = UserService.pokeData;
-
-        }
-
+        
+      this.pokemonData = test;
+    }
     , 1000);
   }
 
 random = UserService.random;
+bryce = UserService.bryce;
+nombre : any;
 random2 = UserService.random2;
   pokemonData : any;
-  pokemonsearch : any = [];
+ @Input() pokemonsearch : any = [];
   @Input() search : string = "";
 
-
- test(): void{
-  let result = [];
-  for (let i = 0 ; i < this.pokemonData.length; i++){
-    if(this.pokemonData[i].name.includes(this.search)){
-      result.push(this.pokemonData[i]);
-      }}}
+test123(){
+  if(this.search == ''){
+    this.bryce = UserService.bryce;
+    this.bryce += 20;
+    this.nombre = this.bryce;
+  }
+  else if(this.bryce > 21){
+    this.bryce += 20;
+    this.nombre = this.bryce;
+  }
+  console.log(this.bryce)
+}
+ 
  
     
 

@@ -1,12 +1,10 @@
 
-<button (click)="test()">recherche</button>
-
-
 <div class="recherche" *ngIf="search !== ''">
-    <section class="Card"  *ngFor="let recherche of pokemonsearch">
+    <section class="Card"  *ngFor="let recherche of pokemonsearch.slice(0,nombre)">
         <img src="{{recherche.image}}/low.jpg" alt="">
         
     </section>
+    <button (click)="test123()"> afficher</button>
 </div>
 
 
