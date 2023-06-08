@@ -15,7 +15,8 @@ export class CarteComponent implements OnInit {
 
   ngOnInit(): void {
     setTimeout(() => {
-      this.pokemonData = UserService.pokeData;
+      this.pokemonData = UserService.pokeData; 
+      console.log(this.pokemonData);
         }
 
     , 1000);
