@@ -1,9 +1,12 @@
 <app-header class="header"></app-header>
 <div class="recherche">
-    <input type="text" [(ngModel)]="search">
+    <input type="text" [(ngModel)]="search" (keyup)="recherche()">
     </div>
     
-<app-carte [search]="search" class="carte"></app-carte>
+<app-carte
+ [search]="search"
+ [pokemonsearch]="pokemonsearch" 
+ class="carte"></app-carte>
 
 
 
