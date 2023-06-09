@@ -10,9 +10,14 @@ import { useAnimation } from '@angular/animations';
   providers: [UserService],
 })
 export class AppComponent implements OnInit{
+
+
+
+
   ngOnInit(): void {
     setTimeout(() => {
       this.pokemonData = UserService.pokeData;
+      this.nombreTest = UserService.nombretest;
         }
 
     , 1000);
@@ -23,26 +28,32 @@ export class AppComponent implements OnInit{
   random = UserService.random;
   random2 = UserService.random2;
   search : string = "";
-  bryce = UserService.bryce;
+  length : number = 0;
+  nombreTest : any;
+  test: string = "lhello"
+
+
  
 
 
   title = 'Team_Racket';
 
+  init(){
+    
+console.log(UserService.nombretest);
+  }
 
   recherche(): void{
     let result = [];
+    UserService.decrementNumbers();
     for (let i = 0 ; i < this.pokemonData.length; i++){
-      if(this.pokemonData[i].name.includes(this.search)){
+      if(this.pokemonData[i].name.startsWith(this.search)){
         result.push(this.pokemonData[i]);
         
         }}
         this.pokemonsearch = result;
-        
-
+        this.length = result.length;
       }
-
-
 }
 
 

@@ -11,63 +11,58 @@ import { UserService } from '../user.service';
 export class CarteComponent implements OnInit {
 
 
-  
-
   ngOnInit(): void {
+
     setTimeout(() => {
       let test = [];
-      for (let i = 0 ; i < 3409; i++){
+      for (let i = 0; i < 3409; i++) {
         UserService.pokeData[i].name.toLowerCase();
         test.push(UserService.pokeData[i]);
         test[i].name = UserService.pokeData[i].name.toLowerCase();
 
-        }
-        
+      }
+
       this.pokemonData = test;
+      this.nombre = UserService.nombretest
     }
-    , 1000);
+      , 1000);
   }
 
-random = UserService.random;
-bryce = UserService.bryce;
-nombre : any;
-random2 = UserService.random2;
-  pokemonData : any;
- @Input() pokemonsearch : any = [];
-  @Input() search : string = "";
+  random = UserService.random;
+  random2 = UserService.random2;
+  pokemonData: any;
+  nombre: any;
+  @Input() pokemonsearch: any = [];
+  @Input() search: string = "";
+  @Input() length: number = 0;
 
-test123(){
-  if(this.search == ''){
-    this.bryce = UserService.bryce;
-    this.bryce += 20;
-    this.nombre = this.bryce;
+  incrementNumbers() {
+    UserService.incrementNumbers();
+    this.nombre = UserService.nombretest;
   }
-  else if(this.bryce > 21){
-    this.bryce += 20;
-    this.nombre = this.bryce;
-  }
-  console.log(this.bryce)
+moins(){
+  UserService.decrementNumbers()
+  this.nombre = UserService.nombretest;
 }
- 
- 
-    
 
 
-
-
- }
-
-
-
-
-
-
- 
-
-
-   
+image(){
   
-  
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

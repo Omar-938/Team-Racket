@@ -1,11 +1,16 @@
-.Card:hover img{
-    scale: 120%;
-}
 
+.nombreResultat{
+    display: flex;
+    border: solid black;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
 .pokemoncard{
     display: flex;
     flex-wrap: wrap;
     margin: auto;
+    margin-top: 2rem;
 }
 .Card{
     margin: 0.3em;
@@ -18,3 +23,10 @@
     flex-wrap: wrap;
     margin: auto;
 }
+.buttonRecherche{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+
