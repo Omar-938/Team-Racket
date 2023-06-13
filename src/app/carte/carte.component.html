@@ -22,8 +22,8 @@
 
 
 <div class="pokemoncard" *ngIf="search === '' ">
-    <section class="Card"  *ngFor="let test of pokemonData.slice(random,random2)">
-        <img src="{{test.image}}/low.jpg" alt="">
+    <section class="Card"  *ngFor="let test of pokemonData.slice(random,random2)" >
+        <img src="{{test.image}}/low.jpg" alt="" [@flipIn]>
     </section>
 </div>
 
