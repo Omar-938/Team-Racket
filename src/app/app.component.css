@@ -1,8 +1,5 @@
 
-.carte{
-    display: flex;
-    flex-wrap: wrap;
-    }
+
 
 .header{
     display: flex;
@@ -31,5 +28,6 @@ div{
     width: 10%;
     color: white;
     background-color:#3e4346 ;
+
 }
 
