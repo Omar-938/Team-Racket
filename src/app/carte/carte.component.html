@@ -3,7 +3,6 @@
     </div>
 
 
-
 <div class="search" *ngIf="search !== ''">
     <div class="nombreResultat">
         <h1> Nombre de résultat disponible : {{length}}</h1>
@@ -20,13 +19,11 @@
 
 
 
-    
-
-    <img src="{{test.image}}/low.jpg" alt="">
 
 
+<div class="pokemoncard" *ngIf="search === '' ">
+    <section class="Card"  *ngFor="let test of pokemonData.slice(random,random2)">
+        <img src="{{test.image}}/low.jpg" alt="">
+    </section>
 </div>
-
-
-
 
