@@ -18,7 +18,7 @@
     margin: auto;
 }
 
-.recherche{
+.search{
     display: flex;
     flex-wrap: wrap;
     margin: auto;
@@ -30,3 +30,25 @@
 }
 
 
+.recherche{
+    background-color:#3e4346 ;
+    width: 100%;
+}   
+
+.search input{
+background-color: white;
+width: 50%;
+height: 20px;
+}
+
+.search button{
+    width: 10%;
+    color: white;
+    background-color:#3e4346 ;
+}
+
+.recherche{
+    display: flex;
+    justify-content: center;
+    border: solid black;
+}

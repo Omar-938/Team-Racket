@@ -32,9 +32,9 @@ export class CarteComponent implements OnInit {
   random2 = UserService.random2;
   pokemonData: any;
   nombre: any;
-  @Input() pokemonsearch: any = [];
-  @Input() search: string = "";
-  @Input() length: number = 0;
+  pokemonsearch: any = [];
+  search: string = "";
+  length: number = 0;
 
   incrementNumbers() {
     UserService.incrementNumbers();
@@ -46,11 +46,26 @@ moins(){
 }
 
 
-image(){
+init(){
+    
+  console.log(UserService.nombretest);
+    }
   
+
+recherche(): void{
+  let result = [];
+  UserService.decrementNumbers();
+  for (let i = 0 ; i < this.pokemonData.length; i++){
+    if(this.pokemonData[i].name.startsWith(this.search)){
+      result.push(this.pokemonData[i]);
+      
+      }}
+      this.pokemonsearch = result;
+      this.length = result.length;
+    }
 }
 
-}
+
 
 
 
