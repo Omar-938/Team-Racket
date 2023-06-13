@@ -10,7 +10,7 @@
     margin: auto;
 }
 
-.pokemonCard{
+.pokemoncard{
     display: flex;
 flex-wrap: wrap;
 } */
@@ -23,7 +23,7 @@ flex-wrap: wrap;
     margin: 20px;
   }
   
-  .card {
+  .Card {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,20 +32,20 @@ flex-wrap: wrap;
     height: 100%;
   }
   
-  .card img {
+  .Card img {
     width: 100%;
     height: 100%;
     object-fit: contain;
   }
   
-  .pokemonCard {
+  .pokemoncard {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
   }
   
-  .pokemonCard .card {
+  .pokemoncard .Card {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -54,7 +54,7 @@ flex-wrap: wrap;
     height: 18.75rem;
   }
   
-  .pokemonCard .card img {
+  .pokemoncard .Card img {
     width: 100%;
     height: 100%;
     object-fit: contain;
