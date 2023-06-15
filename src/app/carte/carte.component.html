@@ -1,33 +1,30 @@
 <div class="recherche">
-    <input type="text" [(ngModel)]="search" (keypress)="init()" (keyup)="recherche()" >
-    </div>
-
+  <input
+    type="text"
+    [(ngModel)]="search"
+    (keypress)="init()"
+    (keyup)="recherche()"
+  />
+</div>
 
 <div class="search" *ngIf="search !== ''">
-    <div class="nombreResultat">
-        <h1> Nombre de résultat disponible : {{length}}</h1>
-    </div>
-    <section class="Card"  *ngFor="let recherche of pokemonsearch.slice(0,nombre)">
-        <img src="{{recherche.image}}/low.jpg" alt="">
-        
-    </section>
-    <div class="buttonRecherche">
-        <button (click)="incrementNumbers()"> afficher plus</button>
-        <button (click)="moins()"> afficher moins</button>
-    </div>
+  <div class="nombreResultat">
+    <h1>Nombre de résultat disponible : {{ length }}</h1>
+  </div>
+  <section
+    class="Card"
+    *ngFor="let recherche of pokemonsearch.slice(0, nombre)"
+  >
+    <img src="{{ recherche.image }}/low.jpg" alt="" />
+  </section>
+  <div class="buttonRecherche">
+    <button (click)="incrementNumbers()">afficher plus</button>
+    <button (click)="moins()">afficher moins</button>
+  </div>
 </div>
 
-
-
-
-
-<div class="pokemoncard" *ngIf="search === '' ">
-    <section class="Card"  *ngFor="let test of pokemonData.slice(random,random2)">
-        <img src="{{test.image}}/low.jpg" alt="">
-    </section>
+<div class="pokemoncard" *ngIf="search === ''">
+  <section class="Card" *ngFor="let test of pokemonData.slice(random, random2)">
+    <img src="{{ test.image }}/low.jpg" alt="" />
+  </section>
 </div>
-
-
-
-
-

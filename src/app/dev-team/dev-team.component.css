@@ -1,0 +1,64 @@
+/* Styles pour les écrans mobiles */
+
+a {
+  display: block;
+  text-align: center;
+  text-decoration: underline;
+  color: #007bff;
+  /*en gras*/
+
+  font-weight: bold;
+}
+
+.head {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+  justify-items: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+}
+
+/* Media queries pour les écrans plus larges */
+@media screen and (min-width: 768px) {
+  .body {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
