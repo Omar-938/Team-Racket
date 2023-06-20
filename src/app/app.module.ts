@@ -10,6 +10,9 @@ import { FooterComponent } from './footer/footer.component';
 import { DevTeamComponent } from './dev-team/dev-team.component';
 import { AppRoutingModule } from './app.routing.module';
 
+import { authGuard } from './auth.guard';
+import { LoginComponent } from './login/login.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +21,7 @@ import { AppRoutingModule } from './app.routing.module';
     HeaderComponent,
     FooterComponent,
     DevTeamComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

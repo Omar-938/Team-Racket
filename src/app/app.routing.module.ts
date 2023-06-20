@@ -5,15 +5,18 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DevTeamComponent } from './dev-team/dev-team.component';
+import { authGuard } from './auth.guard';
+import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
-{ path: '', redirectTo: 'carte', pathMatch: 'full'},
-  { path: 'header', component: HeaderComponent },
-  { path: 'carte', component: CarteComponent },
-  { path: 'footer', component: FooterComponent },
-    { path: 'dev-team', component: DevTeamComponent },
-  { path: '**', component: PageNotFoundComponent},
+{ path: '', redirectTo: 'login', pathMatch: 'full',},
+  { path: 'login', component: LoginComponent },
+  { path: 'header', component: HeaderComponent,canActivate : [authGuard]  },
+  { path: 'carte', component: CarteComponent,canActivate: [authGuard] },
+  { path: 'footer', component: FooterComponent, canActivate: [authGuard] },
+    { path: 'dev-team', component: DevTeamComponent, canActivate: [authGuard] },
+  { path: '**', component: PageNotFoundComponent, canActivate: [authGuard]},
   
 ];
 
