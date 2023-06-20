@@ -1,7 +1,11 @@
 <div class="recherche">
-    <input type="text" [(ngModel)]="search" (keypress)="init()" (keyup)="recherche()" >
-    </div>
-
+  <input
+    type="text"
+    [(ngModel)]="search"
+    (keypress)="init()"
+    (keyup)="recherche()"
+  />
+</div>
 
 <div class="search" *ngIf="search !== ''">
     <div class="nombreResultat">
@@ -25,4 +29,5 @@
     <section class="Card" *ngFor="let test of pokemonData.slice(random,random2)" >
         <img src="{{test.image}}/low.jpg" alt="" [@zoomIn] >
     </section>
+
 </div>
