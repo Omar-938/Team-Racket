@@ -9,9 +9,10 @@ import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { DevTeamComponent } from './dev-team/dev-team.component';
 import { AppRoutingModule } from './app.routing.module';
-
 import { authGuard } from './auth.guard';
 import { LoginComponent } from './login/login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { LoginComponent } from './login/login.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    BrowserAnimationsModule
     
   ],
   providers: [],
