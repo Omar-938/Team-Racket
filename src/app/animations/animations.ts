@@ -1,4 +1,6 @@
+
 import { animate, state, style, transition, trigger, keyframes } from '@angular/animations';
+
 
 export const fadeIn = trigger('fadeIn', [
   transition(':enter', [
@@ -54,3 +56,4 @@ export const zoomIn = trigger('zoomIn', [
       ]))
     ])
   ]);
+

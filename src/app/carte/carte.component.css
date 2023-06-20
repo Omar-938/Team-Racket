@@ -1,19 +1,38 @@
 
-.card:hover img{
-    scale: 125%;
+
+.nombreResultat{
+    display: flex;
+    border: solid black;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
 }
-
-.Card{
-
+.Card {
     margin: 0.3em;
     width: 25%;
     margin: auto;
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    border-radius: 10%;
+    box-shadow: 0 0 5px rgb(212, 219, 34);
+
+  }
+  
+  .Card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+    object-fit: cover;
+  }
 
 .pokemoncard{
     display: flex;
-flex-wrap: wrap;
-} */
+    align-items: center;
+    flex-wrap: wrap;
 
 .recherche {
     display: flex;
