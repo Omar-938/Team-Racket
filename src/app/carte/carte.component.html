@@ -11,7 +11,7 @@
         <img src="{{recherche.image}}/low.jpg" alt="">
         
     </section>
-    <div class="buttonRecherche">
+    <div class="buttonRecherche" *ngIf="length > 20">
         <button (click)="incrementNumbers()"> afficher plus</button>
         <button (click)="moins()"> afficher moins</button>
     </div>
