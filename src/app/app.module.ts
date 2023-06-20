@@ -7,13 +7,16 @@ import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DetailCarteComponent } from './detail-carte/detail-carte.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     CarteComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    DetailCarteComponent
   ],
   imports: [
     BrowserModule,

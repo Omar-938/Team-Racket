@@ -1,4 +1,4 @@
-import { animate, state, style, transition, trigger } from '@angular/animations';
+import { animate, state, style, transition, trigger, keyframes } from '@angular/animations';
 
 export const fadeIn = trigger('fadeIn', [
   transition(':enter', [
@@ -32,17 +32,25 @@ export const zoomIn = trigger('zoomIn', [
     ]),
   ]);
 
-export const cardFlip = trigger('cardFlip', [
+  export const myAnimation = trigger('myAnimation', [
     state('default', style({
-        transform: 'none'
-      })),
-      state('flipped', style({
-        transform: 'rotateY(180deg)'
-      })),
-      transition('default => flipped', [
-        animate('0.5s')
-      ]),
-      transition('flipped => default', [
-        animate('0.5s')
-      ])
+      transform: 'none'
+    })),
+    state('flipped', style({
+      transform: 'rotateY(180deg)'
+    })),
+    transition('default => flipped', [
+      animate('400ms ease-in-out', keyframes([
+        style({ transform: 'rotateY(90deg)', offset: 0.33 }),
+        style({ transform: 'rotateY(180deg)', offset: 0.66 }),
+        style({ transform: 'rotateY(270deg)', offset: 1.0 })
+      ]))
+    ]),
+    transition('flipped => default', [
+      animate('400ms ease-in-out', keyframes([
+        style({ transform: 'rotateY(90deg)', offset: 0.33 }),
+        style({ transform: 'rotateY(0)', offset: 0.66 }),
+        style({ transform: 'rotateY(-90deg)', offset: 1.0 })
+      ]))
     ])
+  ]);

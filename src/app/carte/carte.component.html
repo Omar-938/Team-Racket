@@ -1,5 +1,5 @@
 <div class="recherche">
-    <input type="text" [(ngModel)]="search" (keypress)="init()" (keyup)="recherche()" >
+    <input class="inputRecherche" type="text" [(ngModel)]="search" (keypress)="init()" (keyup)="recherche()" >
     </div>
 
 
@@ -20,10 +20,15 @@
 
 
 
-
-<div class="pokemoncard" *ngIf="search === '' ">
-    <section class="Card"  *ngFor="let test of pokemonData.slice(random,random2)" >
-        <img src="{{test.image}}/low.jpg" alt="" [@flipIn]>
+<div class="pokemoncard" *ngIf="search === ''">
+    <section class="Card flip-card" *ngFor="let test of pokemonData.slice(random,random2)">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="{{test.image}}/low.jpg" alt="" [@zoomIn]>
+        </div>
+        <div class="flip-card-back">
+          <!-- Ajoutez le contenu de la face arrière de la carte ici -->
+        </div>
+      </div>
     </section>
-</div>
-
+  </div>
