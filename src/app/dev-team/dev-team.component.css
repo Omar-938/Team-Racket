@@ -3,10 +3,8 @@
 a {
   display: block;
   text-align: center;
-  text-decoration: underline;
   color: #007bff;
   /*en gras*/
-
   font-weight: bold;
 }
 
