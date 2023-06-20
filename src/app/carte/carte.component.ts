@@ -12,7 +12,21 @@ import { cardFlip, flipIn, zoomIn, rotateIn, fadeIn } from '../animations/animat
 })
 export class CarteComponent implements OnInit {
 
+  constructor(private http: HttpClient) {}
 
+
+
+  random = UserService.random;
+  random2 = UserService.random2;
+  pokemonData: any;
+  pokemonDataBis: any;
+  nombre: any;
+  pokemonsearch: any = [];
+  search: string = "";
+  length: number = 0;
+  infoPokemon : any;
+  id : string = "";
+  
   ngOnInit(): void {
 
     setTimeout(() => {
@@ -25,18 +39,28 @@ export class CarteComponent implements OnInit {
       }
 
       this.pokemonData = test;
-      this.nombre = UserService.nombretest
+      this.nombre = UserService.nombretest;
+     
+      
     }
       , 1000);
+  }  
+ 
+
+  info(text : string){
+    this.http.get(`https://api.tcgdex.net/v2/fr/cards/${text}`).subscribe((data)=>{
+      this.infoPokemon = data;
+      console.log(this.infoPokemon);
+      
+    })
   }
 
-  random = UserService.random;
-  random2 = UserService.random2;
-  pokemonData: any;
-  nombre: any;
-  pokemonsearch: any = [];
-  search: string = "";
-  length: number = 0;
+  carte(index : number){
+    this.id = this.pokemonData[index + UserService.random].id;
+    
+    this.info(this.id);
+    
+  }
 
   incrementNumbers() {
     UserService.incrementNumbers();
@@ -65,6 +89,10 @@ recherche(): void{
       this.pokemonsearch = result;
       this.length = result.length;
     }
+
+
+
+    
 
 }
 

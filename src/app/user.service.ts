@@ -1,3 +1,4 @@
+import { useAnimation } from '@angular/animations';
 import { HttpClient } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
 
@@ -6,11 +7,9 @@ import { Injectable, OnInit } from '@angular/core';
 })
 export class UserService{
 
-/*
-pokemon v1 : https://api.pokemontcg.io/v2/cards?q=set.id:base1 */
+
   
   constructor(private http: HttpClient) {}
-
   static random = Math.round(Math.random()*700);
   static random2 = UserService.random + 20;
    static nombretest = 20;
@@ -28,7 +27,6 @@ pokemon v1 : https://api.pokemontcg.io/v2/cards?q=set.id:base1 */
   });
 
     });
-
 
    static incrementNumbers(): void{
     
