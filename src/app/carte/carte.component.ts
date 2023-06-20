@@ -2,11 +2,13 @@ import { Component, Input, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, min } from 'rxjs';
 import { UserService } from '../user.service';
+import { cardFlip, flipIn, zoomIn, rotateIn, fadeIn } from '../animations/animations';
 
 @Component({
   selector: 'app-carte',
   templateUrl: './carte.component.html',
-  styleUrls: ['./carte.component.css']
+  styleUrls: ['./carte.component.css'],
+  animations: [ cardFlip, flipIn, zoomIn, rotateIn, fadeIn ]
 })
 export class CarteComponent implements OnInit {
 
@@ -63,6 +65,7 @@ recherche(): void{
       this.pokemonsearch = result;
       this.length = result.length;
     }
+
 }
 
 
