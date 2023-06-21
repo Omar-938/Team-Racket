@@ -21,7 +21,7 @@ export class CarteComponent implements OnInit {
   pokemonData: any;
   pokemonDataBis: any;
   nombre: any;
-  pokemonsearch: any = [];
+  pokemonsearch: any ;
   search: string = "";
   length: number = 0;
   infoPokemon : any;
@@ -45,6 +45,11 @@ export class CarteComponent implements OnInit {
     }
       , 1000);
   }  
+
+
+  evolution(){
+    // si le nom de evolve from de la carte plus 1 === le nom de la carte afficher => renvoie cette carte dans évolution ? rien arricher !!   
+  }
  
 
   info(text : string){
@@ -55,7 +60,13 @@ export class CarteComponent implements OnInit {
     })
   }
 
-  carte(index : number){
+
+  carteRecherche(index : any){
+    this.id = this.pokemonsearch[index].id;
+    this.info(this.id);
+  }
+
+  carte(index : number): void{
     this.id = this.pokemonData[index + UserService.random].id;
     
     this.info(this.id);
