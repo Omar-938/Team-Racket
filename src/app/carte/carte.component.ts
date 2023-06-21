@@ -26,6 +26,8 @@ export class CarteComponent implements OnInit {
   length: number = 0;
   infoPokemon : any;
   id : string = "";
+  image : string = "";
+  infoAffichage : any = [];
   
   ngOnInit(): void {
 
@@ -51,25 +53,43 @@ export class CarteComponent implements OnInit {
     // si le nom de evolve from de la carte plus 1 === le nom de la carte afficher => renvoie cette carte dans évolution ? rien arricher !!   
   }
  
+  infoAffichageType : any ;
+  infoAffichageAttacks : any;
 
-  info(text : string){
+
+  info(text : any){
     this.http.get(`https://api.tcgdex.net/v2/fr/cards/${text}`).subscribe((data)=>{
       this.infoPokemon = data;
-      console.log(this.infoPokemon);
+      this.infoAffichage = this.infoPokemon;
+      this.infoAffichageType = this.infoPokemon.types
+      this.infoAffichageAttacks = this.infoPokemon.attacks
+     console.log(this.infoAffichage);
       
     })
   }
 
+  randomToClick : boolean = false;
+  toClick : boolean = true;
+
+  carteToClick(){
+    this.toClick = !this.toClick;
+    this.randomToClick = !this.randomToClick;
+  }
 
   carteRecherche(index : any){
     this.id = this.pokemonsearch[index].id;
+    this.image = this.pokemonsearch[index].image;
     this.info(this.id);
+    this.toClick = !this.toClick;
+    this.randomToClick = !this.randomToClick;
   }
 
   carte(index : number): void{
     this.id = this.pokemonData[index + UserService.random].id;
-    
     this.info(this.id);
+    this.toClick = !this.toClick;
+    this.randomToClick = !this.randomToClick;
+    this.image = this.pokemonData[index + UserService.random].image;
     
   }
 
