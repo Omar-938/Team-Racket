@@ -7,15 +7,22 @@ import { CarteComponent } from './carte/carte.component';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
+<<<<<<< HEAD
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { DetailCarteComponent } from './detail-carte/detail-carte.component';
 
+=======
+>>>>>>> dev
 import { DevTeamComponent } from './dev-team/dev-team.component';
 import { AppRoutingModule } from './app.routing.module';
-
 import { authGuard } from './auth.guard';
 import { LoginComponent } from './login/login.component';
+<<<<<<< HEAD
+=======
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+>>>>>>> dev
 
 @NgModule({
   declarations: [
