@@ -1,4 +1,10 @@
 
+.typesbar{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    }
+
 .nombreResultat{
     display: flex;
     border: solid black;
@@ -45,7 +51,18 @@
 .recherche{
     background-color:#3e4346 ;
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }   
+
+.recherche button{
+    border-radius: 5px 5px 5px;
+}
+
+.recherche input{
+    width: 30%;
+    margin: auto;
+}
 
 .search input{
 background-color: white;

@@ -10,7 +10,7 @@ export class UserService{
 
   
   constructor(private http: HttpClient) {}
-  static random = Math.round(Math.random()*700);
+  static random = Math.round(Math.random()*50);
   static random2 = UserService.random + 20;
    static nombretest = 20;
   static pokeData : any;
@@ -39,7 +39,11 @@ export class UserService{
     
   }
   
-    
+  static returnToRandom(){
+    console.log("coucou");
+  }  
+
+
   }
 
 

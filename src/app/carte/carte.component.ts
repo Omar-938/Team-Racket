@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, min } from 'rxjs';
 import { UserService } from '../user.service';
 import { cardFlip, flipIn, zoomIn, rotateIn, fadeIn } from '../animations/animations';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-carte',
@@ -14,6 +15,13 @@ export class CarteComponent implements OnInit {
 
   constructor(private http: HttpClient) {}
 
+  headerComponent: HeaderComponent = new HeaderComponent();
+
+
+
+  returnToRandom(){
+    new HeaderComponent()
+  }
 
 
   random = UserService.random;
@@ -28,12 +36,15 @@ export class CarteComponent implements OnInit {
   id : string = "";
   image : string = "";
   infoAffichage : any = [];
+
   
   ngOnInit(): void {
 
     setTimeout(() => {
       let test = [];
-      for (let i = 0; i < 3409; i++) {
+      this.http.get(`https://api.tcgdex.net/v2/fr/types/`).subscribe((data)=>{
+      this.types = data;})
+        for (let i = 0; i < 3409; i++) {
         UserService.pokeData[i].name.toLowerCase();
         test.push(UserService.pokeData[i]);
         test[i].name = UserService.pokeData[i].name.toLowerCase();
@@ -49,14 +60,37 @@ export class CarteComponent implements OnInit {
   }  
 
 
-  evolution(){
-    // si le nom de evolve from de la carte plus 1 === le nom de la carte afficher => renvoie cette carte dans évolution ? rien arricher !!   
-  }
- 
   infoAffichageType : any ;
   infoAffichageAttacks : any;
+  types : any;
+  filter : any;
 
 
+
+
+  
+selecteTypes(index : any){
+  this.http.get(`https://api.tcgdex.net/v2/fr/types/${this.types[index]}`).subscribe((data)=>{
+    this.filter = data;
+    this.pokemonData = this.filter.cards;
+    
+    })
+    
+    this.init();
+}
+
+afficherPlus(){
+  this.random2 += 20;
+}
+
+afficherMoins(){
+  this.random2 = UserService.random2;
+}
+
+returnAleatoire(){
+this.pokemonData = UserService.pokeData;
+}
+  
   info(text : any){
     this.http.get(`https://api.tcgdex.net/v2/fr/cards/${text}`).subscribe((data)=>{
       this.infoPokemon = data;
@@ -82,6 +116,7 @@ export class CarteComponent implements OnInit {
     this.info(this.id);
     this.toClick = !this.toClick;
     this.randomToClick = !this.randomToClick;
+ 
   }
 
   carte(index : number): void{
@@ -101,26 +136,29 @@ moins(){
   UserService.decrementNumbers()
   this.nombre = UserService.nombretest;
 }
-
-
-init(){
-    
-  console.log(UserService.nombretest);
-    }
   
 
-recherche(): void{
-  let result = [];
+
+
+recherche(stringSearch : string): void{
+  
+ let result = [];
   UserService.decrementNumbers();
   for (let i = 0 ; i < this.pokemonData.length; i++){
-    if(this.pokemonData[i].name.startsWith(this.search)){
+    if(this.pokemonData[i].name.startsWith(stringSearch)){
       result.push(this.pokemonData[i]);
       
       }}
       this.pokemonsearch = result;
       this.length = result.length;
+      
     }
 
+
+    init(){
+      this.search = "";
+      this.pokemonsearch = [];
+    }
 
 
     
