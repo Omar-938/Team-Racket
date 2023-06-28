@@ -27,12 +27,12 @@ export class LoginComponent implements OnInit {
 
   setMessage() {
     if (this.authService.isLoggedIn) {
-      this.message = "Vous êtes connecté";
+      this.message = "Vous êtes connecté{{name}}.";
     } else {
       this.message = "Identifiant ou mot de passe incorrect.";
     }
   }
-
+  
   login() {
     this.message = "Tentative de connexion en cours...";
     this.authService
@@ -40,7 +40,12 @@ export class LoginComponent implements OnInit {
       .subscribe((isLoggedIn: boolean) => {
         this.setMessage();
         if (isLoggedIn) {
-          this.router.navigate(["carte"]);
+          if (this.name === 'rachid' || this.name === 'damien' || this.name === 'olivier' || this.name === 'admin') {
+            // Rediriger vers la page de profil avec le nom de l'utilisateur dans l'URL
+            this.router.navigate(['/profil', this.name]);
+          } else {
+            this.router.navigate(["/default-page"]);
+          }
         } else {
           this.password = '';
           this.router.navigate(['/login']);
@@ -52,4 +57,5 @@ export class LoginComponent implements OnInit {
     this.authService.logout();
     this.message = 'Vous êtes déconnecté.';
   }
+  
 }

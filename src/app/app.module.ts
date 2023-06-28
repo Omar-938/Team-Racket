@@ -16,6 +16,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormulaireComponent } from './formulaire/formulaire.component';
 import { PikaComponent } from './pika/pika.component';
 
+import { ProfilComponent } from './profil/profil.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { PikaComponent } from './pika/pika.component';
     FormulaireComponent,
     PikaComponent,
    
+    ProfilComponent,
   ],
   imports: [
     BrowserModule,
