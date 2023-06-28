@@ -7,13 +7,12 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { DevTeamComponent } from './dev-team/dev-team.component';
 import { authGuard } from './auth.guard';
 import { LoginComponent } from './login/login.component';
-import { PokemonComponent } from './pokemon/pokemon.component';
+
 
 
 const routes: Routes = [
 { path: '', redirectTo: 'login', pathMatch: 'full',},
   { path: 'login', component: LoginComponent },
-  { path: 'pokemon', component: PokemonComponent },
   { path: 'header', component: HeaderComponent,canActivate : [authGuard]  },
   { path: 'carte', component: CarteComponent,canActivate: [authGuard] },
   { path: 'footer', component: FooterComponent, canActivate: [authGuard] },

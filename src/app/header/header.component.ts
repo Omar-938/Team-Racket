@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { UserService } from '../user.service';
+
 
 @Component({
   selector: 'app-header',
@@ -7,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  
+  @Output() onButtonClick: EventEmitter<any> = new EventEmitter<any>();
+
+
+  returnToRandom(){
+    this.onButtonClick.emit();
+  }
 }
