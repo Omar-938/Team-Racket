@@ -16,17 +16,17 @@ ngOnInit(): void {
 
   setTimeout(() => {
     for (let i = 0; i < 3500 ; i++){
-      if(UserService.pokeData[i].name == 'damien'){
+      if(UserService.pokeData[i].name === 'damien'){
 
       this.teamDev.push(UserService.pokeData[i])
 
       }
-      if(UserService.pokeData[i].name == 'olivier'){
+      if(UserService.pokeData[i].name === 'olivier'){
 
         this.teamDev.push(UserService.pokeData[i])
 
         }
-      if(UserService.pokeData[i].name == 'rachid'){
+      if(UserService.pokeData[i].name === 'rachid'){
 
         this.teamDev.push(UserService.pokeData[i])
         }
