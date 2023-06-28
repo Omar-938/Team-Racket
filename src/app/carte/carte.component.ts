@@ -2,14 +2,17 @@ import { Component, Input, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, min } from 'rxjs';
 import { UserService } from '../user.service';
-import { cardFlip, flipIn, zoomIn, rotateIn, fadeIn } from '../animations/animations';
+import { flipIn, zoomIn, rotateIn, fadeIn } from '../animations/animations';
 import { HeaderComponent } from '../header/header.component';
+
 
 @Component({
   selector: 'app-carte',
   templateUrl: './carte.component.html',
   styleUrls: ['./carte.component.css'],
-  animations: [ cardFlip, flipIn, zoomIn, rotateIn, fadeIn ]
+
+  animations: [flipIn, zoomIn, rotateIn, fadeIn ]
+
 })
 export class CarteComponent implements OnInit {
 
