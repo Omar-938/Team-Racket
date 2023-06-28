@@ -8,6 +8,7 @@ import { DevTeamComponent } from './dev-team/dev-team.component';
 import { authGuard } from './auth.guard';
 import { LoginComponent } from './login/login.component';
 import { PokemonComponent } from './pokemon/pokemon.component';
+import { FormulaireComponent } from './formulaire/formulaire.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'carte', component: CarteComponent,canActivate: [authGuard] },
   { path: 'footer', component: FooterComponent, canActivate: [authGuard] },
     { path: 'dev-team', component: DevTeamComponent, canActivate: [authGuard] },
+  { path: 'formulaire', component: FormulaireComponent, canActivate :[authGuard]},
   { path: '**', component: PageNotFoundComponent, canActivate: [authGuard]},
   
 ];
