@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, min } from 'rxjs';
 import { UserService } from '../user.service';
-import { myAnimation, flipIn, zoomIn, rotateIn, fadeIn } from '../animations/animations';
+import { flipIn, zoomIn, rotateIn, fadeIn } from '../animations/animations';
 import { HeaderComponent } from '../header/header.component';
 
 
@@ -11,7 +11,7 @@ import { HeaderComponent } from '../header/header.component';
   templateUrl: './carte.component.html',
   styleUrls: ['./carte.component.css'],
 
-  animations: [ myAnimation, flipIn, zoomIn, rotateIn, fadeIn ]
+  animations: [flipIn, zoomIn, rotateIn, fadeIn ]
 
 })
 export class CarteComponent implements OnInit {
