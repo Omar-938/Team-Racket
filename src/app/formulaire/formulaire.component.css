@@ -922,6 +922,11 @@
 		-webkit-box-shadow: 0 0 20px #ff6600 inset;
 		-moz-box-shadow: 0 0 20px #ff6600 inset;
 		-o-box-shadow: 0 0 20px #ff6600 inset;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		
 	}
 
 	div#yellowBox2
@@ -1030,3 +1035,20 @@
  
 }
 
+input, textarea {
+	border-width: 0;
+  }
+
+.name, .surname, .mail, .phone, .message{
+	padding-left: 2rem;
+	padding-top: 10px;
+	
+}
+
+
+  
+::placeholder {
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+ font-size: 15px;
+}

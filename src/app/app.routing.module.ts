@@ -8,6 +8,7 @@ import { DevTeamComponent } from './dev-team/dev-team.component';
 import { authGuard } from './auth.guard';
 import { LoginComponent } from './login/login.component';
 import { FormulaireComponent } from './formulaire/formulaire.component';
+import { PikaComponent } from './pika/pika.component';
 
 
 const routes: Routes = [
@@ -18,7 +19,9 @@ const routes: Routes = [
   { path: 'footer', component: FooterComponent, canActivate: [authGuard] },
     { path: 'dev-team', component: DevTeamComponent, canActivate: [authGuard] },
   { path: 'formulaire', component: FormulaireComponent, canActivate :[authGuard]},
+  { path: 'pika', component: PikaComponent, canActivate :[authGuard]},
   { path: '**', component: PageNotFoundComponent, canActivate: [authGuard]},
+
   
 ];
 

@@ -24,27 +24,26 @@
         </div>
         <div id="picture">
             <form [formGroup]="myForm" (ngSubmit)="submitMyform()">
-<div>
-                <label for="nom"></label>
+<div class="name">
+            <label for="nom"></label>
             <input type="text" formControlName="name" placeholder="Nom :">
         </div>
-        <div>
-            
-                <label for="prenom"></label>
+        <div class="surname">
+            <label for="prenom"></label>
             <input type="text" formControlName="surname" placeholder="Prénom :">
         </div>
-        <div>
-                <label for="mail"></label>
+        <div class="mail">
+            <label for="mail"></label>
             <input type="mail" formControlName="mail" placeholder="E-mail :">
         </div>
-        <div>
+        <div class="message">
             <label for="message"></label>
             <textarea id="message" formControlName="message" placeholder="Message :"></textarea>
         </div>
-        <div> 
+        <!-- <div> 
             <br> 
-            <button type="submit">Envoyé</button>
-        </div>      
+            <button type="submit">Envoyé</button> 
+        </div>   -->    
             </form>
         </div>
         <div id="buttonbottomPicture"></div>
@@ -100,7 +99,7 @@
       <div id="miniButtonGlass5"></div>
       <div id="barbutton3"></div>
       <div id="barbutton4"></div>
-      <div id="yellowBox1"></div>
+      <div id="yellowBox1" (click)=submitMyform()>Envoyé</div>
       <div id="yellowBox2"></div>
       <div id="bg_curve1_right"></div>
       <div id="bg_curve2_right"></div>

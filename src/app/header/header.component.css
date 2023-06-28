@@ -3,7 +3,7 @@ div{
     justify-content: center;
 }
 
-img{
+a{
     max-width: 80%;
     max-height: 80%;
     object-fit: contain;

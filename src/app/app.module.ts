@@ -14,6 +14,8 @@ import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormulaireComponent } from './formulaire/formulaire.component';
+import { PikaComponent } from './pika/pika.component';
+
 
 
 @NgModule({
@@ -26,6 +28,8 @@ import { FormulaireComponent } from './formulaire/formulaire.component';
     DevTeamComponent,
     LoginComponent,
     FormulaireComponent,
+    PikaComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -33,7 +37,8 @@ import { FormulaireComponent } from './formulaire/formulaire.component';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
