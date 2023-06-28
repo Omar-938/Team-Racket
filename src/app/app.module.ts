@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app.routing.module';
 import { authGuard } from './auth.guard';
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProfilComponent } from './profil/profil.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FooterComponent,
     DevTeamComponent,
     LoginComponent,
+    ProfilComponent,
   ],
   imports: [
     BrowserModule,

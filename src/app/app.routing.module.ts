@@ -7,6 +7,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { DevTeamComponent } from './dev-team/dev-team.component';
 import { authGuard } from './auth.guard';
 import { LoginComponent } from './login/login.component';
+import { ProfilComponent } from './profil/profil.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,8 @@ const routes: Routes = [
   { path: 'carte', component: CarteComponent,canActivate: [authGuard] },
   { path: 'footer', component: FooterComponent, canActivate: [authGuard] },
     { path: 'dev-team', component: DevTeamComponent, canActivate: [authGuard] },
+    { path: 'profil', component: ProfilComponent, canActivate: [authGuard] },
+    { path: 'profil/:nom', component: ProfilComponent, canActivate: [authGuard] },
   { path: '**', component: PageNotFoundComponent, canActivate: [authGuard]},
   
 ];
