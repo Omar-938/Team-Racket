@@ -26,7 +26,6 @@ import { FormulaireComponent } from './formulaire/formulaire.component';
     DevTeamComponent,
     LoginComponent,
     FormulaireComponent,
-    FormulaireComponent,
   ],
   imports: [
     BrowserModule,

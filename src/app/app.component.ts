@@ -13,12 +13,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 
 export class AppComponent{
   title = 'Team_Racket';
-myForm = new FormGroup({
-name: new FormControl(""),
-surname: new FormControl(""),
-mail: new FormControl(""),
-message: new FormControl(""),
-});
+
 
 }
 
