@@ -1,10 +1,33 @@
 
+.typesbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 
-.typesbar{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    }
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 0.5vw 0.5vw;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2.5vh;
+  margin: 0.5vh 0.5vw;
+  cursor: pointer;
+  flex: 1;
+  height: auto;
+}
+
+.typesbar button:hover{
+    background-color: #3e4346;
+}
+
+.typesbar button:active{
+    background-color: #3e4346;
+}
 
 
 .nombreResultat{
