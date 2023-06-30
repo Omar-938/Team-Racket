@@ -172,7 +172,7 @@ width: 55%;
     align-items: center;
 }
 
-h1{
+.nom{
     background-color: #e55366;
     border: none;
     color: white;
@@ -204,4 +204,34 @@ h1{
     align-items: center;
     width: auto;
     width: 75%;
+    
+}
+
+
+.typesbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.types-select {
+  display: none;
+}
+
+.types-button {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .types-select {
+    display: block;
+  }
+
+  .types-button {
+    display: none;
+  }
+
+  .typesbar button{
+  display: none;
+  }
+
 }

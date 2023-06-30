@@ -1,5 +1,5 @@
 <div id="pokedex">
-    <div id="left">
+    <div id="left" *ngIf="left">
       <div id="logo"></div>
       <div id="bg_curve1_left"></div>
       <div id="bg_curve2_left"></div>
@@ -54,7 +54,7 @@
           <div class="sp"></div>
         </div>
       </div>
-      <div id="bigbluebutton"></div>
+      <div id="bigbluebutton" (click)="change()"></div>
       <div id="barbutton1"></div>
       <div id="barbutton2"></div>
       <div id="cross">
@@ -100,7 +100,7 @@
       <div id="barbutton3"></div>
       <div id="barbutton4"></div>
       <div id="yellowBox1" (click)=submitMyform()>Envoyé</div>
-      <div id="yellowBox2"></div>
+      <div id="yellowBox2" (click)="change()"></div>
       <div id="bg_curve1_right"></div>
       <div id="bg_curve2_right"></div>
       <div id="curve1_right"></div>

@@ -20,4 +20,10 @@ export class FormulaireComponent {
 
     Ifsubmit : boolean = false;
 
+    left : boolean = true;
+
+    change(){
+      this.left = !this.left;
+    }
+
 }
