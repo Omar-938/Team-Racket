@@ -106,7 +106,7 @@ this.pokemonData = UserService.pokeData;
   }
 
   randomToClick : boolean = false;
-  toClick : boolean = true;
+  toClick : boolean = false;
 
   carteToClick(){
     this.toClick = !this.toClick;
