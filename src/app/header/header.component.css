@@ -2,7 +2,10 @@ div{
     display: flex;
     justify-content: center;
 }
-
+img{
+    max-width: 100%;
+    height: auto;
+}
 a{
     max-width: 80%;
     max-height: 80%;

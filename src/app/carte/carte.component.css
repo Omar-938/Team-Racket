@@ -142,3 +142,12 @@ width: 55%;
     transition: 0.5s;
     box-shadow: 0 0 1px rgb(212, 219, 34);
 }
+.bouton-image {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px;
+}

@@ -1,7 +1,10 @@
 .basdepage{
     display: flex;
-    align-items: center;
+   align-items: center;
     justify-content: center;
+    /*  position: relative; */
+  
+    padding-top: 30%;
 }
 
 img{

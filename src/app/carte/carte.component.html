@@ -31,6 +31,8 @@
         
     </section>
     <div class="buttonRecherche" *ngIf="length > 20">
+       
+
         <button (click)="incrementNumbers()"> afficher plus</button>
         <button (click)="moins()"> afficher moins</button>
     </div>
@@ -45,8 +47,8 @@
         <img *ngIf="test.image" (click)="carte(i)" src="{{test.image}}/low.jpg" alt="" [@zoomIn] >
     </section>
     <div class="buttonAfficherPlusEtMoins">
-        <button (click)="afficherPlus()"> Afficher plus</button>
-        <button (click)="afficherMoins()"> Afficher moins</button>
+        <img src="../../assets/img/boutonplus.png" alt="Image cliquable" (click)="afficherPlus()">
+        <img src="../../assets/img/boutonmoins.png" alt="Image cliquable" (click)="afficherMoins()"><!-- <button (click)="afficherPlus()"> Afficher plus</button> -->
     </div>
 </div>
 
