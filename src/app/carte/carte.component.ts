@@ -141,7 +141,7 @@ moins(){
 
 
 recherche(stringSearch : string): void{
-  
+  this.pokemonData = UserService.pokeData;
  let result = [];
   UserService.decrementNumbers();
   for (let i = 0 ; i < this.pokemonData.length; i++){
