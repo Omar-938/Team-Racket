@@ -42,14 +42,14 @@
   <div class="pokemoncard" *ngIf="search === ''">
     <section
       class="Card"
-      *ngFor="let test of pokemonData.slice(random, random2); let i = index"
+      *ngFor="let test of pokemonData.slice(random, random2); let i = index "
     >
       <img
         *ngIf="test.image"
         (click)="carte(i)"
         src="{{ test.image }}/low.jpg"
         alt=""
-        [@zoomIn]
+        [@fadeIn]
       />
     </section>
     <div class="buttonAfficherPlusEtMoins">

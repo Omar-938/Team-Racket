@@ -75,7 +75,7 @@
         </div>
       </div>
     </div>
-    <div id="right">
+    <div id="right" *ngIf="!left">
       <div id="stats" *ngIf="Ifsubmit">
         <h3 class="titre-liste">Salut dresseur {{myForm.value.surname}} {{myForm.value.name}}</h3>
         <p>la team rocket à volé tout tes pokemons !!!</p> <br>
