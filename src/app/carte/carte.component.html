@@ -1,78 +1,82 @@
 <div class="recherche">
-  <input
-    type="text"
-    [(ngModel)]="search"
-    (keyup)="recherche(search)"
-  />
+  <input type="text" [(ngModel)]="search" (keyup)="recherche(search)" />
 
   <div class="typesbar">
     <button (click)="returnAleatoire()">Aléatoire</button>
-    <button *ngFor="let type of types; let i = index"  (click)="selecteTypes(i)"> {{type}} </button>
+    <button *ngFor="let type of types; let i = index" (click)="selecteTypes(i)">
+      {{ type }}
+    </button>
+  </div>
 </div>
-
-</div>
-
-
-
-
 
 <div class="random" [hidden]="randomToClick">
-    
-
-
-<div class="search" *ngIf="search !== ''">
+  <div class="search" *ngIf="search !== ''">
     <div class="nombreResultat">
-        <h1> Nombre de résultat disponible : {{length}}</h1>
+      <h1>Nombre de résultat disponible : {{ length }}</h1>
     </div>
-    <section class="Card"  *ngFor="let recherche of pokemonsearch.slice(0,nombre); let i = index" >
-        <img (click)="carteRecherche(i)" src="{{recherche.image}}/low.jpg" alt="" [@flipIn]>
-       
-        
-        
+    <section
+      class="Card"
+      *ngFor="let recherche of pokemonsearch.slice(0, nombre); let i = index"
+    >
+      <img
+        *ngIf="recherche.image"
+        (click)="carteRecherche(i)"
+        src="{{ recherche.image }}/low.jpg"
+        alt=""
+        [@flipIn]
+      />
     </section>
     <div class="buttonRecherche" *ngIf="length > 20">
-       
-
         <button (click)="incrementNumbers()"> afficher plus</button>
         <button (click)="moins()"> afficher moins</button>
     </div>
-</div>
+  </div>
 
-
-
-
-
-<div class="pokemoncard" *ngIf="search === '' ">
-    <section class="Card" *ngFor="let test of pokemonData.slice(random,random2); let i = index" >
-        <img *ngIf="test.image" (click)="carte(i)" src="{{test.image}}/low.jpg" alt="" [@zoomIn] >
+  <div class="pokemoncard" *ngIf="search === ''">
+    <section
+      class="Card"
+      *ngFor="let test of pokemonData.slice(random, random2); let i = index"
+    >
+      <img
+        *ngIf="test.image"
+        (click)="carte(i)"
+        src="{{ test.image }}/low.jpg"
+        alt=""
+        [@zoomIn]
+      />
     </section>
     <div class="buttonAfficherPlusEtMoins">
         <img src="../../assets/img/boutonplus.png" alt="Image cliquable" (click)="afficherPlus()">
         <img src="../../assets/img/boutonmoins.png" alt="Image cliquable" (click)="afficherMoins()"><!-- <button (click)="afficherPlus()"> Afficher plus</button> -->
     </div>
-</div>
-
+  </div>
 </div>
 
 <div class="ToClick" [hidden]="toClick">
-
-<h1> <b> Nom :</b> {{infoAffichage.name}} </h1>
-<img (click)="carteToClick()" src="{{image}}/low.jpg" alt="">
-<p *ngIf="infoAffichage.description"> <b>Déscription : </b> {{infoAffichage.description}} </p>
-<p *ngIf="infoAffichage.evolveFrom"><b> L'évolution de </b> {{infoAffichage.evolveFrom}} </p>
-<p *ngIf="infoAffichage.hp"><b> HP du pokemon :</b> {{infoAffichage.hp}} </p>
-<p *ngIf="infoAffichage.effect"> <b>Effet :</b> {{infoAffichage.effect}} </p>
-<ul *ngFor="let types of infoAffichageType">
-    <li *ngIf="types"> <b> Type du pokemon :</b> {{types}} </li>
-</ul>
-<div class="attacks">
-    <ul *ngFor="let attacks of infoAffichageAttacks">
-        <li *ngIf="attacks.name"> <b> Attaques :</b> {{attacks.name}}</li>
-        <li *ngIf="attacks.damage" > <b>Dommages :</b> {{attacks.damage}} </li>
-        <li *ngIf="attacks.effect"> <b>Effet :</b> {{attacks.effect}}</li>
-
+  <h1><b> Nom :</b> {{ infoAffichage.name }}</h1>
+  <img (click)="carteToClick()" src="{{ image }}/low.jpg" alt="" />
+  <div class="pokemonDetails">
+    <p *ngIf="infoAffichage.description">
+      <b>Déscription : </b> {{ infoAffichage.description }}
+    </p>
+    <p *ngIf="infoAffichage.evolveFrom">
+      <b> L'évolution de </b> {{ infoAffichage.evolveFrom }}
+    </p>
+    <p *ngIf="infoAffichage.hp">
+      <b> HP du pokemon :</b> {{ infoAffichage.hp }}
+    </p>
+    <p class="effect" *ngIf="infoAffichage.effect">
+      <b>Effet :</b> {{ infoAffichage.effect }}
+    </p>
+    <ul *ngFor="let types of infoAffichageType">
+      <li *ngIf="types"><b> Type du pokemon :</b> {{ types }}</li>
     </ul>
-</div>
-
-
+    <div class="attacks">
+      <ul *ngFor="let attacks of infoAffichageAttacks">
+        <li *ngIf="attacks.name"><b> Attaques :</b> {{ attacks.name }}</li>
+        <li *ngIf="attacks.damage"><b>Dommages :</b> {{ attacks.damage }}</li>
+        <li class="effect" *ngIf="attacks.effect"><b>Effet :</b> {{ attacks.effect }}</li>
+      </ul>
+    </div>
+  </div>
 </div>

@@ -19,18 +19,17 @@ $mint: #56ffe9;
 body {
 	background-color: $primary-color;
 	font-family: $primary-font;
-	line-height: 1.875;
+	line-height: auto;
 }
 .container-boxy {
 	position: relative;
-	width: 820px;
-	margin: 50px auto;
-	padding: 60px;
-	padding-bottom: 0;
+	width: auto;
+	margin: auto auto;
+	padding: auto;
 	display: flex;
-	justify-content: space-between;
-	box-shadow: 10px 10px 0 $primary-color-dark;
-	background-color: #fff;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	background-color: transparent;
 }
 
 
@@ -73,6 +72,7 @@ $head-radius-bottom: 55px;
 .poke {
 	position: relative;
 	display: inline-block;
+	margin-top: 19vw;
 	
 	&::before,
 	&::after {

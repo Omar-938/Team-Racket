@@ -5,11 +5,13 @@ import { Observable, delay, of, tap } from "rxjs";
   providedIn: "root",
 })
 export class AuthService {
+
+
   isLoggedIn: boolean = false;
   redirectUrl: string | undefined;
 
   login(name: string, password: string): Observable<boolean> {
-    const isLoggedIn = name == "rachid" && password == "rachid";
+    const isLoggedIn = name == "rachid" && password == "rachid" || name == "olivier" && password == "olivier" || name == "damien" && password == "damien" || name == "admin" && password == "admin";
     return of(isLoggedIn).pipe(
       delay(1000),
       tap((isLoggedIn) => (this.isLoggedIn = isLoggedIn))

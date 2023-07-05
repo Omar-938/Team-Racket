@@ -31,8 +31,6 @@ ngOnInit(): void {
         this.teamDev.push(UserService.pokeData[i])
         }
     }
-   
-
   }
     , 500);
 }

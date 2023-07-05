@@ -106,7 +106,7 @@ this.pokemonData = UserService.pokeData;
   }
 
   randomToClick : boolean = false;
-  toClick : boolean = true;
+  toClick : boolean = false;
 
   carteToClick(){
     this.toClick = !this.toClick;
@@ -161,6 +161,10 @@ recherche(stringSearch : string): void{
     init(){
       this.search = "";
       this.pokemonsearch = [];
+    }
+
+    getPokemonData(): Observable<any> {
+      return this.pokemonData;
     }
 
 

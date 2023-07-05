@@ -957,8 +957,7 @@
 
 }
 
- @media handheld and (orientation:portrait), (max-width:460px){ 
-	@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oxanium:wght@200;300;400;500;700;800&family=Signika+Negative:wght@400;500;600;700&display=swap');
+@media handheld and (orientation:portrait), (max-width:768px) {
 
 div#right{
 display: none;
@@ -1076,9 +1075,11 @@ img{
 } */
 	/* div#pokedex
 	{
-		width: 400px;
+		width: auto;
+		margin: auto;
+    display: flex;
+	justify-content: center;
 	}
-
 
 	div#logo
 	{
@@ -1099,60 +1100,14 @@ img{
 		float: left;
 		position: relative;
 		z-index: 1;
-		margin: 0 auto;
 	}
 
-	div#curve1_left
-	{
-		width: 201px;
-		height: 85px;
-		background-color: #8b0000;
-		float: left;
-		padding: 15px 0 0 15px;
-
-		position: absolute;
-		top: 0;
-		left: 0;
-
-		box-shadow: 0 0 #5e0000;
-		-webkit-box-shadow: 0 0 #5e0000;
-		-moz-box-shadow: 0 0 #5e0000;
-		-o-box-shadow: 0 0 #5e0000;
-
-		border-bottom-right-radius: 85px 60px;
-		-webkit-border-bottom-right-radius: 85px 60px;
-		-moz-border-bottom-right-radius: 85px 60px;
-		-o-border-bottom-right-radius: 85px 60px;
-
-		border-top-left-radius: 30px;
-		-webkit-border-top-left-radius: 30px;
-		-moz-border-top-left-radius: 30px;
-		-o-border-top-left-radius: 30px;
-	}
-
-	div#bg_curve1_left
-	{
-		width: 400px;
-		height: 80px;
-		background-color: #8b0000;
-
-		box-shadow: -10px 9px #5e0000;
-		-webkit-box-shadow: -10px 9px #5e0000;
-		-moz-box-shadow: -10px 9px #5e0000;
-		-o-box-shadow: -10px 9px #5e0000;
-
-		border-top-left-radius: 30px;
-		-webkit-border-top-left-radius: 30px;
-		-moz-border-top-left-radius: 30px;
-		-o-border-top-left-radius: 30px;
-	}
-
-	div#right, div#screen, div#bigbluebutton, div#barbutton1, div#barbutton2, div#cross
+	div#right
 	{
 		display: none;
 	}
+	
 
- 
 }
 
 input, textarea {
@@ -1166,10 +1121,9 @@ input, textarea {
 }
 
 
-
   
 ::placeholder {
   color: #000;
   font-family: Arial, Helvetica, sans-serif;
- font-size: 15px; 
-} */
+ font-size: 15px;
+}
