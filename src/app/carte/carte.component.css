@@ -1,6 +1,4 @@
 .typesbar {
-  display: flex;
-  justify-content: center;
   align-items: center;
   width: 100%;
 }
@@ -45,7 +43,7 @@ button {
   width: auto;
   height: auto;
   border-radius: 10%;
-  box-shadow: 0 0 5px rgb(212, 219, 34);
+  box-shadow: 0 0 10px rgb(212, 219, 34);
 }
 
 .Card img {
@@ -96,7 +94,7 @@ button {
   justify-content: center;
   align-items: center;
   width: 13.5rem;
-  height: 18.75rem;
+  height: 18.5rem;
 }
 
 .pokemoncard .Card img {

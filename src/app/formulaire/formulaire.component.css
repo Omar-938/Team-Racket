@@ -1,27 +1,33 @@
 @media all {
-  div#pokedex {
-    width: auto;
-    margin: auto;
+
+	div#pokedex
+	{
+		width: auto;
+		margin: auto;
     display: flex;
     justify-content: center;
   }
 
-  div#left {
-    width: 350px;
-    height: 500px;
-    float: left;
-    position: relative;
-    z-index: 1;
-  }
+	div#left
+	{
+		width: 400px;
+		height: 500px;
+		float: left;
+		position: relative;
+		z-index: 1;
+	}
 
-  div#right {
-    width: 350px;
-    height: 500px;
-    float: left;
-    position: relative;
-  }
+	div#right
+	{
+		width: 350px;
+		height: 500px;
+		float: left;
+		position: relative;
+	}
 
-  /* //// LEFT PART //// */
+
+
+	/* //// LEFT PART //// */
 
   div#curve1_left {
     width: 201px;
@@ -351,7 +357,8 @@
   #bigbluebutton {
     height: 50px;
     width: 50px;
-    background-color: #000;
+    background-color:#ffff00;
+    color: #494949;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -897,19 +904,15 @@
     -webkit-box-shadow: 0 0 20px #ff6600 inset;
     -moz-box-shadow: 0 0 20px #ff6600 inset;
     -o-box-shadow: 0 0 20px #ff6600 inset;
-  }
 
-  form {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 
-  label {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-  }
+}
+
+@media (max-width: 400px) {
 
   label > input,
   label > textarea {
@@ -926,15 +929,4 @@
     justify-content: center;
   }
 
-  div#left {
-    width: 400px;
-    height: 500px;
-    float: left;
-    position: relative;
-    z-index: 1;
-  }
-
-  div#right {
-    display: none;
-  }
 }

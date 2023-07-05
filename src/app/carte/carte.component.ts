@@ -67,7 +67,9 @@ export class CarteComponent implements OnInit {
       .get(`https://api.tcgdex.net/v2/fr/types/${this.types[index]}`)
       .subscribe((data) => {
         this.filter = data;
-        this.pokemonData = this.filter.cards;
+        this.pokemonData = this.filter.cards.filter(
+          (card: { image: undefined }) => card.image !== undefined
+        );
       });
 
     this.init();
@@ -131,6 +133,7 @@ export class CarteComponent implements OnInit {
   }
 
   recherche(stringSearch: string): void {
+    this.pokemonData = UserService.pokeData;
     let result = [];
     UserService.decrementNumbers();
     for (let i = 0; i < this.pokemonData.length; i++) {
