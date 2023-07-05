@@ -2,14 +2,17 @@ import { Component, Input, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, min } from 'rxjs';
 import { UserService } from '../user.service';
-import { cardFlip, flipIn, zoomIn, rotateIn, fadeIn } from '../animations/animations';
+import { myAnimation, flipIn, zoomIn, rotateIn, fadeIn } from '../animations/animations';
 import { HeaderComponent } from '../header/header.component';
+
 
 @Component({
   selector: 'app-carte',
   templateUrl: './carte.component.html',
   styleUrls: ['./carte.component.css'],
-  animations: [ cardFlip, flipIn, zoomIn, rotateIn, fadeIn ]
+
+  animations: [ myAnimation, flipIn, zoomIn, rotateIn, fadeIn ]
+
 })
 export class CarteComponent implements OnInit {
 
@@ -103,7 +106,7 @@ this.pokemonData = UserService.pokeData;
   }
 
   randomToClick : boolean = false;
-  toClick : boolean = true;
+  toClick : boolean = false;
 
   carteToClick(){
     this.toClick = !this.toClick;
@@ -158,6 +161,10 @@ recherche(stringSearch : string): void{
     init(){
       this.search = "";
       this.pokemonsearch = [];
+    }
+
+    getPokemonData(): Observable<any> {
+      return this.pokemonData;
     }
 
 

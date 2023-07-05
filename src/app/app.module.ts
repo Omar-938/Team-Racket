@@ -9,9 +9,12 @@ import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { DevTeamComponent } from './dev-team/dev-team.component';
 import { AppRoutingModule } from './app.routing.module';
-import { authGuard } from './auth.guard';
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormulaireComponent } from './formulaire/formulaire.component';
+import { PikaComponent } from './pika/pika.component';
+
 import { ProfilComponent } from './profil/profil.component';
 
 
@@ -24,6 +27,8 @@ import { ProfilComponent } from './profil/profil.component';
     FooterComponent,
     DevTeamComponent,
     LoginComponent,
+    FormulaireComponent,
+    PikaComponent,
     ProfilComponent,
   ],
   imports: [
@@ -31,8 +36,8 @@ import { ProfilComponent } from './profil/profil.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
-    
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

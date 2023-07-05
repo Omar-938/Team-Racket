@@ -1,9 +1,14 @@
-import { animate, state, style, transition, trigger } from '@angular/animations';
+
+import { animate, state, style, transition, trigger, keyframes } from '@angular/animations';
+
 
 export const fadeIn = trigger('fadeIn', [
   transition(':enter', [
-    style({ opacity: 0 }),
-    animate('500ms', style({ opacity: 1 })),
+    style({ opacity: 0, transform: 'translateY(250px)' }),
+    animate('1900ms', style({ opacity: 1, transform: 'translateY(0)' })),
+  ]),
+  transition(':leave', [
+    animate('500ms', style({ opacity: 0, transform: 'translateY(10px)' })),
   ]),
 ]);
 
@@ -16,8 +21,8 @@ export const rotateIn = trigger('rotateIn', [
 
 export const flipIn = trigger('flipIn', [
   transition(':enter', [
-    style({ transform: 'perspective(100px) rotate3d(1, 0, 0, 180deg)', opacity: 0 }),
-    animate('700ms', style({ transform: 'perspective(100px) rotate3d(1, 0, 0, 0deg)', opacity: 1 })),
+    style({ transform: 'perspective(550px) rotate3d(9, 9, 9, -0.2turn)', opacity: 0 }),
+    animate('500ms', style({ transform: 'perspective(100px) rotate3d(1, 0, 0, 0deg)', opacity: 1 })),
   ]),
 ]);
 
@@ -32,17 +37,26 @@ export const zoomIn = trigger('zoomIn', [
     ]),
   ]);
 
-export const cardFlip = trigger('cardFlip', [
+  export const myAnimation = trigger('myAnimation', [
     state('default', style({
-        transform: 'none'
-      })),
-      state('flipped', style({
-        transform: 'rotateY(180deg)'
-      })),
-      transition('default => flipped', [
-        animate('0.5s')
-      ]),
-      transition('flipped => default', [
-        animate('0.5s')
-      ])
+      transform: 'none'
+    })),
+    state('flipped', style({
+      transform: 'rotateY(180deg)'
+    })),
+    transition('default => flipped', [
+      animate('400ms ease-in-out', keyframes([
+        style({ transform: 'rotateY(90deg)', offset: 0.33 }),
+        style({ transform: 'rotateY(180deg)', offset: 0.66 }),
+        style({ transform: 'rotateY(270deg)', offset: 1.0 })
+      ]))
+    ]),
+    transition('flipped => default', [
+      animate('400ms ease-in-out', keyframes([
+        style({ transform: 'rotateY(90deg)', offset: 0.33 }),
+        style({ transform: 'rotateY(0)', offset: 0.66 }),
+        style({ transform: 'rotateY(-90deg)', offset: 1.0 })
+      ]))
     ])
+  ]);
+
