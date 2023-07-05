@@ -15,7 +15,6 @@
   </div>
   
 </div>
-
 <div class="random" [hidden]="randomToClick">
   <div class="search" *ngIf="search !== ''">
     <div class="nombreResultat">
@@ -45,8 +44,16 @@
       />
     </section>
     <div class="buttonAfficherPlusEtMoins">
-      <button (click)="afficherPlus()">Afficher plus</button>
-      <button (click)="afficherMoins()">Afficher moins</button>
+      <img
+        src="../../assets/img/boutonplus.png"
+        alt="Image cliquable"
+        (click)="afficherPlus()"
+      />
+      <img
+        src="../../assets/img/boutonmoins.png"
+        alt="Image cliquable"
+        (click)="afficherMoins()"
+      /><!-- <button (click)="afficherPlus()"> Afficher plus</button> -->
     </div>
   </div>
 </div>
@@ -78,6 +85,15 @@
           <b>Effet :</b> {{ attacks.effect }}
         </li>
       </ul>
+      <div class="attacks">
+        <ul *ngFor="let attacks of infoAffichageAttacks">
+          <li *ngIf="attacks.name"><b> Attaques :</b> {{ attacks.name }}</li>
+          <li *ngIf="attacks.damage"><b>Dommages :</b> {{ attacks.damage }}</li>
+          <li class="effect" *ngIf="attacks.effect">
+            <b>Effet :</b> {{ attacks.effect }}
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
+  </section>
 </div>
