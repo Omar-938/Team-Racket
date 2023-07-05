@@ -1,12 +1,15 @@
 @media all {
-
+.espace{
+	height: 200px;
+}
 	div#pokedex
 	{
-		width: auto;
-		margin: auto;
+		
     display: flex;
-    justify-content: center;
-  }
+
+	justify-content: center;
+	align-items: center;
+	}
 
 	div#left
 	{
@@ -21,6 +24,7 @@
 	{
 		width: 350px;
 		height: 500px;
+
 		float: left;
 		position: relative;
 	}
@@ -920,6 +924,11 @@
     padding: 5px;
   }
 }
+@media only screen and (max-width: 320px) {
+    #left {
+      width: 80%;
+    }
+    }
 
 @media (max-width: 720px) {
   div#pokedex {
