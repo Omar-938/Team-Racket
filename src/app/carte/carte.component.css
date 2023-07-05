@@ -189,7 +189,7 @@ h1{
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 5.5vh;
+    font-size: 3.5vh;
     margin: 1vh 1vw;
     cursor: pointer;
     flex: 1;
@@ -198,19 +198,54 @@ h1{
     border-radius: 15%;
 }
 
-.ToClick img{
-    width: 35%;
-    height: 35%;
-    border-radius: 10%;
-    object-fit: cover;
-    box-shadow: 0 0 5px rgb(212, 219, 34);
+.ToClick img {
+  width: 60%;
+  height: 35%;
+  border-radius: 10%;
+  object-fit: cover;
+  box-shadow: 0 0 5px rgb(212, 219, 34);
 }
 
-.pokemonDetails{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    width: 75%;
+.pokemonDetails {
+  width: 50%;
+  background-color: #c4c4c4;
+  border: 5px solid #e55366;
+  color: black;
+  border-radius: 10%; 
+  display: table-cell;
+ 
+}
+.container{
+overflow: auto;
+
+}
+
+.picture{
+float: left;
+width:50%
+}
+
+
+@media handheld and (orientation:portrait), (max-width:500px) {
+
+  
+  .ToClick img{
+
+      width: 60%;
+      height: 35%;
+      border-radius: 10%;
+      object-fit: cover;
+      box-shadow: 0 0 5px rgb(212, 219, 34);
+    
+
+  }
+
+.pokemonDetails {
+   
+  display: table-cell;
+  flex-wrap: wrap;
+ 
+
+}
+
 }
