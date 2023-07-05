@@ -82,6 +82,9 @@ if(!isNaN(index)){
         this.pokemonData = this.filter.cards.filter((card: { image: undefined; }) => card.image !== undefined);
       
       });
+      if(index.value === 'Aléatoire'){
+        this.returnAleatoire();
+      }
 }
     this.init();
   }

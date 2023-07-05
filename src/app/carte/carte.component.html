@@ -6,7 +6,7 @@
     <div class="types-select">
       <select (change)="selecteTypes($event.target)">
         <option value="">Sélectionnez un type</option>
-        <option (click)="returnAleatoire()">Aléatoire</option>
+        <option>Aléatoire</option>
         <option *ngFor="let type of types; let i = index" >{{ type }}</option>
       </select>
     </div>
