@@ -1,7 +1,4 @@
-
 .typesbar {
-  display: flex;
-  justify-content: center;
   align-items: center;
   width: 100%;
 }
@@ -21,148 +18,191 @@ button {
   height: auto;
 }
 
-.typesbar button:hover{
-    background-color: #3e4346;
+.typesbar button:hover {
+  background-color: #3e4346;
 }
 
-.typesbar button:active{
-    background-color: #3e4346;
+.typesbar button:active {
+  background-color: #3e4346;
 }
 
-.nombreResultat{
-    display: flex;
-    border: solid black;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-
+.nombreResultat {
+  display: flex;
+  border: solid black;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 .Card {
-    margin: 0.3em;
-    width: 25%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: auto;
-    height: auto;
-    border-radius: 10%;
-    box-shadow: 0 0 5px rgb(212, 219, 34);
+  margin: 0.3em;
+  width: 25%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  border-radius: 10%;
+  box-shadow: 0 0 10px rgb(212, 219, 34);
+}
 
-  }
-  
-  .Card img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10%;
-    object-fit: cover;
-  }
+.Card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
+  object-fit: cover;
+}
 
-.pokemoncard{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+.pokemoncard {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .recherche {
-    display: flex;
-    flex-wrap: wrap;
-    padding-left: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 2rem;
 }
 .Card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: auto;
-    height: auto;
-    margin: 0.5rem;
-    border-radius: 10%;
-  }
-  
-  .Card img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10%;
-    object-fit: cover;
-    box-shadow: 0 0 5px rgb(212, 219, 34);
-  }
-  
-  .pokemoncard {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .pokemoncard .Card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 13.5rem;
-    height: 18.75rem;
-  }
-  
-  .pokemoncard .Card img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-  
-
-.search{
-    display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-}
-.buttonRecherche{
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  margin: 0.5rem;
+  border-radius: 10%;
 }
 
-
-.recherche{
-    background-color:#3e4346 ;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}   
-
-.recherche button{
-    border-radius: 5px 5px 5px;
+.Card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
+  object-fit: cover;
+  box-shadow: 0 0 5px rgb(212, 219, 34);
 }
 
-.recherche input{
-    width: 30%;
-    margin: auto;
+.pokemoncard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
-.search input{
-background-color: white;
-width: 50%;
-height: 20px;
+.pokemoncard .Card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 13.5rem;
+  height: 18.5rem;
 }
 
-.search button{
-    width: 10%;
-    color: white;
-    background-color:#3e4346 ;
+.pokemoncard .Card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
-.recherche{
-    display: flex;
-    justify-content: center;
-    border: solid black;
+.search {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+.buttonRecherche {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
 }
 
-.inputRecherche{
-width: 55%;
+.recherche {
+  background-color: #3e4346;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.Card:hover{
- transform: scale3d(1.4, 1.4, 1.4);
-    transition: 0.5s;
-    box-shadow: 0 0 1px rgb(212, 219, 34);
+.recherche button {
+  border-radius: 5px 5px 5px;
+}
+
+.recherche input {
+  width: 30%;
+  margin: auto;
+}
+
+.search input {
+  background-color: white;
+  width: 50%;
+  height: 20px;
+}
+
+.search button {
+  width: 10%;
+  color: white;
+  background-color: #3e4346;
+}
+
+.recherche {
+  display: flex;
+  justify-content: center;
+  border: solid black;
+}
+
+.inputRecherche {
+  width: 55%;
+}
+
+.Card:hover {
+  transform: scale3d(1.4, 1.4, 1.4);
+  transition: 0.5s;
+  box-shadow: 0 0 1px rgb(212, 219, 34);
+}
+
+.ToClick {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nom {
+  background-color: #e55366;
+  border: none;
+  color: white;
+  padding: 1vw 1vw;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 5.5vh;
+  margin: 1vh 1vw;
+  cursor: pointer;
+  flex: 1;
+  height: auto;
+  width: auto;
+  border-radius: 15%;
+}
+
+.ToClick img {
+  width: 35%;
+  height: 35%;
+  border-radius: 10%;
+  object-fit: cover;
+  box-shadow: 0 0 5px rgb(212, 219, 34);
+}
+
+.pokemonDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  width: 75%;
+}
+
+.typesbar {
+  display: flex;
+  justify-content: center;
+  color: linear-gradient(to bottom, #000000, #ff0000);
 }
 .bouton-image {
   width: 20px;
@@ -174,13 +214,35 @@ button {
   padding: 10px;
 }
 
-.ToClick{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.types-select select {
+  background-color: #e55366;
+  color: white;
 }
 
+.types-select select option {
+  background-color: #e55366;
+  color: white;
+}
+.types-select {
+  display: none;
+}
+
+.types-button {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .types-select {
+    display: block;
+  }
+
+  .types-button {
+    display: none;
+  }
+
+  .typesbar button {
+    display: none;
+  }
 h1{
     background-color: #e55366;
     border: none;

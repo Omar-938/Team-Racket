@@ -1,5 +1,8 @@
 
 body {
     background-image: url('../src/assets/img/fond-Desktop.webp');
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
   }
-  

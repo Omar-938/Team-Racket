@@ -2,9 +2,7 @@
     display: flex;
    align-items: center;
     justify-content: center;
-    /*  position: relative; */
-  
-    padding-top: 30%;
+    margin-top: 15%;
 }
 
 img{
@@ -13,7 +11,6 @@ img{
     object-fit: contain;
     flex: 1;
     margin-right: 10px;
-
 }
 
 
