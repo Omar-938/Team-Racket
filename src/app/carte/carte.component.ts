@@ -66,6 +66,10 @@ export class CarteComponent implements OnInit {
 
   selecteTypes2(index: any) {
  
+    if(this.randomToClick === true){
+      this.randomToClick =! this.randomToClick;
+      this.toClick =! this.toClick;
+    }
   
 
     if(index.value === "Aléatoire"){
@@ -95,10 +99,11 @@ export class CarteComponent implements OnInit {
 
 
   selecteTypes(index: any) {
-
-    console.log(index.value);
-    console.log(index);
-if(!isNaN(index)){
+    
+    if(this.randomToClick === true){
+      this.randomToClick =! this.randomToClick;
+      this.toClick =! this.toClick;
+    }
 
     this.http
       .get(`https://api.tcgdex.net/v2/fr/types/${this.types[index]}`)
@@ -108,19 +113,8 @@ if(!isNaN(index)){
         this.pokemonData = this.filter.cards.filter((card: { image: undefined; }) => card.image !== undefined);
       
       });
-    }
-    if(typeof index.value === 'string'){
-  this.http
-      .get(`https://api.tcgdex.net/v2/fr/types/${index.value}`)
-      .subscribe((data) => {
-        this.filter = data;
-        this.pokemonData = this.filter.cards.filter((card: { image: undefined; }) => card.image !== undefined);
-      
-      });
-      if(index.value === 'Aléatoire'){
-        this.returnAleatoire();
-      }
-}
+
+    
     this.init();
   }
 
@@ -181,6 +175,10 @@ if(!isNaN(index)){
   }
 
   recherche(stringSearch: string): void {
+    if(this.randomToClick === true){
+      this.randomToClick =! this.randomToClick;
+      this.toClick =! this.toClick;
+    }
     this.pokemonData = UserService.pokeData;
     let result = [];
     stringSearch = stringSearch.toLowerCase();
