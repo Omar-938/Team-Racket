@@ -14,3 +14,9 @@ img {
   flex: 1;
   margin-right: 10px;
 }
+
+@media (max-width: 768px) {
+  .basdepage {
+    position: relative;
+  }
+}
