@@ -1,5 +1,6 @@
 div{
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 img{
@@ -15,4 +16,5 @@ a{
     object-fit: contain;
     flex: 1;
     margin-right: 10px;
+
 }

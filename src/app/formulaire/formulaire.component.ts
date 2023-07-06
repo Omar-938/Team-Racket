@@ -20,9 +20,19 @@ export class FormulaireComponent {
     }
 
     Ifsubmit : boolean = false;
+
     jouerSon() {
       const son = new Audio();
       son.src = '../../assets/son/Pikachu.mp3';
       son.play();
 }
+
+
+    left : boolean = true;
+
+    change(){
+      this.left = !this.left;
+    }
+
+
 }

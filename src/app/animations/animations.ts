@@ -4,8 +4,11 @@ import { animate, state, style, transition, trigger, keyframes } from '@angular/
 
 export const fadeIn = trigger('fadeIn', [
   transition(':enter', [
-    style({ opacity: 0 }),
-    animate('500ms', style({ opacity: 1 })),
+    style({ opacity: 0, transform: 'translateY(250px)' }),
+    animate('750ms', style({ opacity: 1, transform: 'translateY(0)' })),
+  ]),
+  transition(':leave', [
+    animate('500ms', style({ opacity: 0, transform: 'translateY(10px)' })),
   ]),
 ]);
 
@@ -18,8 +21,8 @@ export const rotateIn = trigger('rotateIn', [
 
 export const flipIn = trigger('flipIn', [
   transition(':enter', [
-    style({ transform: 'perspective(100px) rotate3d(1, 0, 0, 180deg)', opacity: 0 }),
-    animate('700ms', style({ transform: 'perspective(100px) rotate3d(1, 0, 0, 0deg)', opacity: 1 })),
+    style({ transform: 'perspective(550px) rotate3d(9, 9, 9, -0.2turn)', opacity: 0 }),
+    animate('500ms', style({ transform: 'perspective(100px) rotate3d(1, 0, 0, 0deg)', opacity: 1 })),
   ]),
 ]);
 
