@@ -74,10 +74,10 @@
     <h1> {{ infoAffichage.name }}</h1>
   </div>
   <section class="container">
-    <div class="picture">
-      <img (click)="carteToClick()" src="{{ image }}/{{high}}" alt="" />
-    </div>
-    <div class="pokemonDetails">
+      <div class="picture">
+       <img (click)="carteToClick()" src="{{ image }}/{{high}}" alt="" />
+      </div>
+      <div class="pokemonDetails">
       <div>
       <p *ngIf="infoAffichage.description">
         <b>Déscription : </b> {{ infoAffichage.description }}
@@ -104,7 +104,8 @@
                   </li>
               </ul>
             </div>
+          </div>
       </div>
-    
-  </section>
+
+    </section>
 </div>
