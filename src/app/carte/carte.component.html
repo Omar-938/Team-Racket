@@ -32,7 +32,7 @@
         (click)="carteRecherche(i)"
         src="{{ recherche.image }}/low.jpg"
         alt=""
-        [@flipIn]
+        [@fadeIn]
       />
     </section>
     <div class="buttonRecherche" *ngIf="length > 20">
@@ -51,7 +51,7 @@
         (click)="carte(i)"
         src="{{ test.image }}{{small}}"
         alt=""
-        [@fadeIn]
+        [@zoomIn]
       />
     </section>
     <div class="buttonAfficherPlusEtMoins">
@@ -75,7 +75,7 @@
   </div>
   <section class="container">
       <div class="picture">
-       <img (click)="carteToClick()" src="{{ image }}/{{high}}" alt="" [@zoomIn] />
+       <img (click)="carteToClick()" src="{{ image }}/{{high}}" alt="" [@flipIn] />
       </div>
       <div class="pokemonDetails">
       <div>
