@@ -76,32 +76,34 @@
     <div class="picture">
       <img (click)="carteToClick()" src="{{ image }}/{{high}}" alt="" />
     </div>
-    <div class="pokemonDetails">
-      <p *ngIf="infoAffichage.description">
-        <b>Déscription : </b> {{ infoAffichage.description }}
-      </p>
-      <p *ngIf="infoAffichage.evolveFrom">
-        <b> L'évolution de </b> {{ infoAffichage.evolveFrom }}
-      </p>
-      <p *ngIf="infoAffichage.hp">
-        <b> HP du pokemon :</b> {{ infoAffichage.hp }}
-      </p>
-      <p class="effect" *ngIf="infoAffichage.effect">
-        <b>Effet :</b> {{ infoAffichage.effect }}
-      </p>
-      <ul *ngFor="let types of infoAffichageType">
-        <li *ngIf="types"><b> Type du pokemon :</b> {{ types }}</li>
+    
+      <div class="pokemonDetails">
+        <p *ngIf="infoAffichage.description">
+          <b>Déscription : </b> {{ infoAffichage.description }}
+        </p>
+        <p *ngIf="infoAffichage.evolveFrom">
+            <b> L'évolution de </b> {{ infoAffichage.evolveFrom }}
+        </p>
+        <p *ngIf="infoAffichage.hp">
+           <b> HP du pokemon :</b> {{ infoAffichage.hp }}
+        </p>
+        <p class="effect" *ngIf="infoAffichage.effect">
+          <b>Effet :</b> {{ infoAffichage.effect }}
+        </p>
+          <ul *ngFor="let types of infoAffichageType">
+            <li *ngIf="types"><b> Type du pokemon :</b> {{ types }}</li>
 
-      </ul>
-      <div class="attacks">
-        <ul *ngFor="let attacks of infoAffichageAttacks">
-          <li *ngIf="attacks.name"><b> Attaques :</b> {{ attacks.name }}</li>
-          <li *ngIf="attacks.damage"><b>Dommages :</b> {{ attacks.damage }}</li>
-          <li class="effect" *ngIf="attacks.effect">
-            <b>Effet :</b> {{ attacks.effect }}
-          </li>
-        </ul>
+          </ul>
+            <div class="attacks">
+              <ul *ngFor="let attacks of infoAffichageAttacks">
+                <li *ngIf="attacks.name"><b> Attaques :</b> {{ attacks.name }}</li>
+                <li *ngIf="attacks.damage"><b>Dommages :</b> {{ attacks.damage }}</li>
+                <li class="effect" *ngIf="attacks.effect">
+                    <b>Effet :</b> {{ attacks.effect }}
+                  </li>
+              </ul>
+            </div>
       </div>
-    </div>
+    
   </section>
 </div>

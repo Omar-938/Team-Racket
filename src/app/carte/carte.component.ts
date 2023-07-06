@@ -62,10 +62,7 @@ export class CarteComponent implements OnInit {
   types: any;
   filter: any;
 
-  infoAffichageType : any ;
-  infoAffichageAttacks : any;
-  types : any;
-  filter : any;
+ 
   small : string = "/low.jpg"
   high : string = "/high.jpg"
 
@@ -81,7 +78,6 @@ export class CarteComponent implements OnInit {
       this.http
       .get(`https://api.tcgdex.net/v2/fr/types/${index.value}`)
       .subscribe((data) => {
-        console.log("data by types", data)
         this.filter = data;
         this.pokemonData = this.filter.cards.filter((card: { image: undefined; }) => card.image !== undefined);
       });
@@ -133,7 +129,6 @@ export class CarteComponent implements OnInit {
         this.infoAffichage = this.infoPokemon;
         this.infoAffichageType = this.infoPokemon.types;
         this.infoAffichageAttacks = this.infoPokemon.attacks;
-        console.log(this.infoAffichage);
       });
   }
 
@@ -173,6 +168,7 @@ export class CarteComponent implements OnInit {
   recherche(stringSearch: string): void {
     this.pokemonData = UserService.pokeData;
     let result = [];
+    stringSearch = stringSearch.toLowerCase();
     UserService.decrementNumbers();
     for (let i = 0; i < this.pokemonData.length; i++) {
       if (this.pokemonData[i].name.startsWith(stringSearch)) {

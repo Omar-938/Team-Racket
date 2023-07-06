@@ -28,14 +28,11 @@ export class UserService {
 
   static incrementNumbers(): void {
     UserService.nombretest += 20;
-    console.log(UserService.nombretest, 'le plus 20');
   }
 
   static decrementNumbers(): void {
     UserService.nombretest = 20;
   }
 
-  static returnToRandom() {
-    console.log('coucou');
-  }
+
 }
