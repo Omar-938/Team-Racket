@@ -4,8 +4,9 @@
   <div class="typesbar">
     <button (click)="returnAleatoire()">Aléatoire</button>
     <div class="types-select">
-      <select (change)="selecteTypes($event.target)">
+      <select (change)="selecteTypes2($event.target)">
         <option value="">Sélectionnez un type</option>
+        <option (click)="selecteTypes2($event.target)">Aléatoire</option>
         <option *ngFor="let type of types; let i = index" (click)="selecteTypes(i)">{{ type }}</option>
       </select>
     </div>
@@ -21,6 +22,7 @@
     <div class="nombreResultat">
       <h1>Nombre de résultat disponible : {{ length }}</h1>
     </div>
+    
     <section
       class="Card"
       *ngFor="let recherche of pokemonsearch.slice(0, nombre); let i = index"
@@ -59,7 +61,7 @@
   </div>
 </div>
 
-<div class="ToClick" [hidden]="toClick">
+<div class="ToClick" *ngIf="toClick === true">
   <div class="nom" *ngIf="infoAffichage.name"><b> Nom :</b> {{ infoAffichage.name }}</div>
   <img (click)="carteToClick()" src="{{ image }}/low.jpg" alt="" />
   <div class="pokemonDetails">
