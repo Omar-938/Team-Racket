@@ -3,6 +3,8 @@
   width: 100%;
 }
 
+
+
 button {
   background-color: #e55366;
   border: none;
@@ -57,6 +59,7 @@ button {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  margin-top: 3rem;
 }
 .recherche {
   display: flex;
@@ -163,6 +166,7 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 2rem;
 }
 
 
