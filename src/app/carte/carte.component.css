@@ -61,7 +61,6 @@ button {
 .recherche {
   display: flex;
   flex-wrap: wrap;
-  padding-left: 2rem;
 }
 .Card {
   display: flex;
@@ -184,7 +183,6 @@ button {
 }
 
 .nom {
-  background-color: #e55366;
   border: none;
   color: white;
   padding: 1vw 1vw;
@@ -272,10 +270,14 @@ h1{
   display: table-cell;
  
 }
+.container{
+display: flex;
+align-items: center;
 
 
 .picture{
-float: left;
+display: block;
+margin:auto;
 width:50%
 }
 
@@ -300,5 +302,6 @@ width:50%
   flex-wrap: wrap;
  
 }
-*/
+
 }
+

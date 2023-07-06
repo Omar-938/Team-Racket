@@ -6,8 +6,9 @@
     <div class="types-select">
       <select (change)="selecteTypes2($event.target)">
         <option value="">Sélectionnez un type</option>
-        <option (click)="selecteTypes2($event.target)">Aléatoire</option>
-        <option *ngFor="let type of types; let i = index" (click)="selecteTypes(i)">{{ type }}</option>
+        <option>Aléatoire</option>
+        <option *ngFor="let type of types; let i = index" >{{ type }}</option>
+
       </select>
     </div>
     <button class="types-button" *ngFor="let type of types; let i = index" (click)="selecteTypes(i)">
@@ -76,22 +77,22 @@
     <div class="picture">
       <img (click)="carteToClick()" src="{{ image }}/{{high}}" alt="" />
     </div>
-    
-      <div class="pokemonDetails">
-        <p *ngIf="infoAffichage.description">
-          <b>Déscription : </b> {{ infoAffichage.description }}
-        </p>
-        <p *ngIf="infoAffichage.evolveFrom">
-            <b> L'évolution de </b> {{ infoAffichage.evolveFrom }}
-        </p>
-        <p *ngIf="infoAffichage.hp">
-           <b> HP du pokemon :</b> {{ infoAffichage.hp }}
-        </p>
-        <p class="effect" *ngIf="infoAffichage.effect">
-          <b>Effet :</b> {{ infoAffichage.effect }}
-        </p>
-          <ul *ngFor="let types of infoAffichageType">
-            <li *ngIf="types"><b> Type du pokemon :</b> {{ types }}</li>
+    <div class="pokemonDetails">
+      <div>
+      <p *ngIf="infoAffichage.description">
+        <b>Déscription : </b> {{ infoAffichage.description }}
+      </p>
+      <p *ngIf="infoAffichage.evolveFrom">
+        <b> L'évolution de </b> {{ infoAffichage.evolveFrom }}
+      </p>
+      <p *ngIf="infoAffichage.hp">
+        <b> HP du pokemon :</b> {{ infoAffichage.hp }}
+      </p>
+      <p class="effect" *ngIf="infoAffichage.effect">
+        <b>Effet :</b> {{ infoAffichage.effect }}
+      </p>
+      <ul *ngFor="let types of infoAffichageType">
+        <li *ngIf="types"><b> Type du pokemon :</b> {{ types }}</li>
 
           </ul>
             <div class="attacks">
