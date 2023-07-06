@@ -61,14 +61,50 @@ export class CarteComponent implements OnInit {
   infoAffichageAttacks: any;
   types: any;
   filter: any;
+  small : string = "/low.jpg"
+  high : string = "/high.jpg"
+
+  selecteTypes2(index: any) {
+ 
+  
+
+    if(index.value === "Aléatoire"){
+      this.returnAleatoire()
+    }
+    else {
+
+      this.http
+      .get(`https://api.tcgdex.net/v2/fr/types/${index.value}`)
+      .subscribe((data) => {
+        console.log("data by types", data)
+        this.filter = data;
+        this.pokemonData = this.filter.cards.filter((card: { image: undefined; }) => card.image !== undefined);
+      });
+
+
+    }
+
+
+    
+
+    this.init();
+  }
+
+
+
+
+
 
   selecteTypes(index: any) {
+
     console.log(index.value);
     console.log(index);
 if(!isNaN(index)){
+
     this.http
       .get(`https://api.tcgdex.net/v2/fr/types/${this.types[index]}`)
       .subscribe((data) => {
+        console.log("data by types", data)
         this.filter = data;
         this.pokemonData = this.filter.cards.filter((card: { image: undefined; }) => card.image !== undefined);
       

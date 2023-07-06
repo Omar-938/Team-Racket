@@ -5,7 +5,7 @@ import { animate, state, style, transition, trigger, keyframes } from '@angular/
 export const fadeIn = trigger('fadeIn', [
   transition(':enter', [
     style({ opacity: 0, transform: 'translateY(250px)' }),
-    animate('1900ms', style({ opacity: 1, transform: 'translateY(0)' })),
+    animate('750ms', style({ opacity: 1, transform: 'translateY(0)' })),
   ]),
   transition(':leave', [
     animate('500ms', style({ opacity: 0, transform: 'translateY(10px)' })),
