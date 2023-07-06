@@ -21,6 +21,7 @@ export class FormulaireComponent {
 
     Ifsubmit : boolean = false;
 
+
     jouerSon() {
       const son = new Audio();
       son.src = '../../assets/son/Pikachu.mp3';

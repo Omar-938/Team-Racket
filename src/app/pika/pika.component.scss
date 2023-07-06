@@ -21,6 +21,7 @@ body {
 	font-family: $primary-font;
 	line-height: auto;
 }
+
 .container-boxy {
 	position: relative;
 	width: auto;
@@ -29,6 +30,7 @@ body {
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 	background-color: transparent;
+
 }
 
 
@@ -548,3 +550,4 @@ $head-radius-bottom: 55px;
 	0% { transform: rotate(45deg) scale(1) }
 	80% { transform: rotate(45deg) scale(1.2) }
 }
+

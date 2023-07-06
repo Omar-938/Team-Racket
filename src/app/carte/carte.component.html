@@ -6,8 +6,9 @@
     <div class="types-select">
       <select (change)="selecteTypes2($event.target)">
         <option value="">Sélectionnez un type</option>
-        <option (click)="selecteTypes2($event.target)">Aléatoire</option>
-        <option *ngFor="let type of types; let i = index" (click)="selecteTypes(i)">{{ type }}</option>
+        <option>Aléatoire</option>
+        <option *ngFor="let type of types; let i = index" >{{ type }}</option>
+
       </select>
     </div>
     <button class="types-button" *ngFor="let type of types; let i = index" (click)="selecteTypes(i)">
@@ -103,7 +104,6 @@
           </li>
         </ul>
       </div>
-    </div>
     </div>
   </section>
 </div>
