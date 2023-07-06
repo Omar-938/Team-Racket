@@ -1,37 +1,51 @@
 @media all {
-.espace{
-	height: 200px;
-}
-	div#pokedex
-	{
-		
+  #picture form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  input {
+    border: none;
+    margin-bottom: 1rem;
+  }
+
+  .name input,
+  .surname input,
+  .mail input,
+  .message textarea {
+    border: none;
+  }
+
+  #picture form div {
+    margin: 0 10px;
+  }
+  .espace {
+    /*height: 200px;*/
+  }
+  div#pokedex {
     display: flex;
 
-	justify-content: center;
-	align-items: center;
-	}
+    justify-content: center;
+    align-items: center;
+  }
 
-	div#left
-	{
-		width: 400px;
-		height: 500px;
-		float: left;
-		position: relative;
-		z-index: 1;
-	}
+  div#left {
+    width: 400px;
+    height: 500px;
+    float: left;
+    position: relative;
+    z-index: 1;
+  }
 
-	div#right
-	{
-		width: 350px;
-		height: 500px;
+  div#right {
+    width: 350px;
+    height: 500px;
 
-		float: left;
-		position: relative;
-	}
+    float: left;
+    position: relative;
+  }
 
-
-
-	/* //// LEFT PART //// */
+  /* //// LEFT PART //// */
 
   div#curve1_left {
     width: 201px;
@@ -361,7 +375,7 @@
   #bigbluebutton {
     height: 50px;
     width: 50px;
-    background-color:#ffff00;
+    background-color: #ffff00;
     color: #494949;
     display: flex;
     flex-direction: column;
@@ -913,11 +927,9 @@
     align-items: center;
     justify-content: center;
   }
-
 }
 
 @media (max-width: 400px) {
-
   label > input,
   label > textarea {
     margin-top: 5px;
@@ -925,10 +937,10 @@
   }
 }
 @media only screen and (max-width: 320px) {
-    #left {
-      width: 80%;
-    }
-    }
+  #left {
+    width: 80%;
+  }
+}
 
 @media (max-width: 720px) {
   div#pokedex {
@@ -937,5 +949,4 @@
     display: flex;
     justify-content: center;
   }
-
 }
