@@ -204,34 +204,86 @@ button {
   justify-content: center;
   color: linear-gradient(to bottom, #000000, #ff0000);
 }
+.bouton-image {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px;
+}
 
 .types-select select {
   background-color: #e55366;
   color: white;
 }
 
-.types-select select option {
-  background-color: #e55366;
-  color: white;
-}
-.types-select {
-  display: none;
+
+h1{
+    background-color: #3e4346;
+    border: none;
+    color: white;
+    padding: 1vw 1vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 3.5vh;
+    margin: 1vh 1vw;
+    cursor: pointer;
+    flex: 1;
+    height: auto;
+    width: auto;
+    border-radius: 15%;
 }
 
-.types-button {
-  display: block;
+.ToClick img {
+  width: 60%;
+  height: 35%;
+  border-radius: 10%;
+  object-fit: cover;
+  box-shadow: 0 0 5px rgb(212, 219, 34);
 }
 
-@media (max-width: 768px) {
-  .types-select {
-    display: block;
+.pokemonDetails {
+  width: 50%;
+  background-color: #c4c4c4;
+  border: 5px solid #e55366;
+  color: black;
+  border-radius: 10%; 
+  display: table-cell;
+ 
+}
+.container{
+overflow: auto;
+
+}
+
+.picture{
+float: left;
+width:50%
+}
+
+
+@media handheld and (orientation:portrait), (max-width:500px) {
+
+  
+  .ToClick img{
+
+      width: 60%;
+      height: 35%;
+      border-radius: 10%;
+      object-fit: cover;
+      box-shadow: 0 0 5px rgb(212, 219, 34);
+    
+
   }
 
-  .types-button {
-    display: none;
-  }
+.pokemonDetails {
+   
+  display: table-cell;
+  flex-wrap: wrap;
+ 
+}
 
-  .typesbar button {
-    display: none;
-  }
 }

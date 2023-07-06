@@ -62,7 +62,12 @@ export class CarteComponent implements OnInit {
   types: any;
   filter: any;
 
-
+  infoAffichageType : any ;
+  infoAffichageAttacks : any;
+  types : any;
+  filter : any;
+  small : string = "/low.jpg"
+  high : string = "/high.jpg"
 
   selecteTypes2(index: any) {
  

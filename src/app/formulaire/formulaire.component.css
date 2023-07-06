@@ -1,12 +1,16 @@
 @media all {
-
+.espace{
+	height: 200px;
+}
 	div#pokedex
 	{
-		width: auto;
-		margin: auto;
+		
     display: flex;
-    justify-content: center;
-  }
+
+	justify-content: center;
+	align-items: center;
+	}
+
 
 	div#left
 	{
@@ -21,6 +25,7 @@
 	{
 		width: 350px;
 		height: 500px;
+
 		float: left;
 		position: relative;
 	}
@@ -920,13 +925,36 @@
     padding: 5px;
   }
 }
+@media only screen and (max-width: 320px) {
+    #left {
+      width: 80%;
+    }
+    }
 
-@media (max-width: 720px) {
-  div#pokedex {
-    width: auto;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-  }
+
+	.containpokedex{
+		max-width: 90%;
+	
+	}
+	
+  
+@media handheld and (orientation:portrait), (max-width:768px) {
+
+div#right{
+display: none;
+};
+div#junction{
+display: none;
+};	
+img{
+	size: 100%;
+}
+#left{
+	justify-content: center;
+	align-items: center;
+	size: 100%;
+};
+
 
 }
+

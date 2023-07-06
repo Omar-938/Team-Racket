@@ -16,14 +16,23 @@ export class FormulaireComponent {
     submitMyform(){
       console.log(this.myForm.value.surname)
       this.Ifsubmit = true;
+      this.jouerSon();
     }
 
     Ifsubmit : boolean = false;
+
+    jouerSon() {
+      const son = new Audio();
+      son.src = '../../assets/son/Pikachu.mp3';
+      son.play();
+}
+
 
     left : boolean = true;
 
     change(){
       this.left = !this.left;
     }
+
 
 }
