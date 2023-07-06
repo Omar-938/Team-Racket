@@ -110,6 +110,8 @@ button {
   display: flex;
   flex-wrap: wrap;
   margin: auto;
+  align-items: center;
+  justify-content: center;
 }
 .buttonRecherche {
   display: flex;
