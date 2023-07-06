@@ -39,7 +39,7 @@
       <img
         *ngIf="test.image"
         (click)="carte(i)"
-        src="{{ test.image }}/low.jpg"
+        src="{{ test.image }}{{small}}"
         alt=""
         [@zoomIn]
       />
@@ -59,13 +59,13 @@
   </div>
 </div>
 
-<div class="ToClick" [hidden]="toClick">
+<div class="ToClick" *ngIf="toClick">
   <div class="nom">
     <h1><b> Nom :</b> {{ infoAffichage.name }}</h1>
   </div>
   <section class="container">
     <div class="picture">
-      <img (click)="carteToClick()" src="{{ image }}/low.jpg" alt="" />
+      <img (click)="carteToClick()" src="{{ image }}/{{high}}" alt="" />
     </div>
     <div class="pokemonDetails">
       <p *ngIf="infoAffichage.description">
