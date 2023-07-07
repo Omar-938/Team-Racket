@@ -1,0 +1,72 @@
+/* Définir la couleur de fond du conteneur */
+div {
+  background-color: #f2f2f2;
+  padding: 16px;
+  border-radius: 4px;
+}
+
+/* Définir le style du titre */
+h2 {
+  text-align: center;
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+h3 {
+  text-align: center;
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+/* Définir le style des étiquettes */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+/* Définir le style des champs de saisie */
+input[type="text"],
+input[type="password"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+/* Définir le style du bouton de connexion */
+button {
+  /* aligné le bouton */
+  margin: auto;
+  display: block;
+
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Définir le style du message d'erreur */
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  padding: 8px;
+  margin-top: 16px;
+}
+
+@media (max-width: 768px) {
+  div {
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}

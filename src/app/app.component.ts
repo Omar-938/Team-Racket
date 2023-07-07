@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from './user.service';
 import { HttpClient } from '@angular/common/http';
 import { useAnimation } from '@angular/animations';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -9,28 +10,13 @@ import { useAnimation } from '@angular/animations';
   styleUrls: ['./app.component.css'],
   providers: [UserService],
 })
-export class AppComponent implements OnInit{
-  ngOnInit(): void {
-    setTimeout(() => {
-      this.pokemonData = UserService.pokeData;
-      console.log(UserService.random)
-        }
 
-    , 1000);
-  }
-
-
-  pokemonData : any;
-  random = UserService.random;
-  random2 = UserService.random2;
- 
-
-
+export class AppComponent{
   title = 'Team_Racket';
 
 
-
 }
+
 
 
 
